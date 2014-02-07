@@ -15,7 +15,7 @@ fstrim -v /data
 fstrim -v /cache
 fstrim -v /preload
 fstrim -v /system
-fstrim -v /efs
+#fstrim -v /efs
 
-echo "Fstrim() of /data /cache /preload /system /efs done"
+echo "Fstrim() of /data /cache /preload /system done"
 exit 0

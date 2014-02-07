@@ -21,14 +21,14 @@ boot="/dev/block/mmcblk0p5" # ROM's kernel image, not used
 recovery="/dev/block/mmcblk0p6" # Recovery image, not used
 radio="/dev/block/mmcblk0p7" # Modem image, not used
 cache="/dev/block/mmcblk0p8" # Temporary cache, not used
-system="/dev/block/mmcblk0p9" # Main system partition, [USED]
+system="/dev/block/platform/msm_sdcc.1/by-name" # Main system partition, [USED]
 preload="/dev/block/mmcblk0p10" # Preload, SELinux, not used
 data="/dev/block/mmcblk0p12" # Internal SD Card, [USED]
 extsd="/dev/block/mmcblk1p1" # External SD Card, not used
 
 case $1 in
 	fs) echo "$fs" ;;
-	efs) echo "$efs" ;;
+	#efs) echo "$efs" ;;
 	boot) echo "$boot" ;;
 	recovery) echo "$recovery" ;;
 	radio) echo "$radio" ;;
@@ -40,7 +40,7 @@ case $1 in
 
 *)
 echo "fs $fs
-efs $efs
+#efs $efs
 boot $boot
 recovery $recovery
 radio $radio

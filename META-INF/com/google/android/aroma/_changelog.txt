@@ -1,21 +1,51 @@
-ArchiDroid 2.3.6
+OmniDroid
 
-- [!] Implemented ArchiDroid Partition Wizard and full F2FS support for /system /preload /cache(*) /data(*)
-# Option for reformatting to F2FS is only available if your custom recovery and chosen kernel support it
-# Reformatting is optional, by default ArchiDroid won't perform any action
-# (*) /data doesn't work with F2FS yet due to kernel bug in Devil's kernel, fixed in 2.4.8 (?)
-# (*) /cache is not being able to reformat back to ext4 from ArchiDroid Partition Wizard, while you can't reformat /data at all if you're flashing from internal sd card. This is on my todo
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- [!] Updated sources
+# Compiled with Google GCC 4.8 Toolchain, for maximum performance and battery life
+# Includes ART fix backported from Android 4.5 (This fixes ART bootloop)
+# Includes Kernel memset fix, thanks to @googyanas (This fixes stock kernel not booting)
+# You should feel a REAL difference in terms of speed compared to previous releases
 
-- [!] Reworked recovery flashing
-# Now you can flash recovery TRULY before ArchiDroid flashing
-# If you choose recovery flashing option, ArchiDroid won't be flashed at all, instead, it will flash your recovery and then reboot it (recovery)
-# If any recovery update will be needed in the future, this way you won't need to do it manually anymore (as long as proper recovery is available in ArchiDroid)
+- Added VNC Viewer, which allows connecting to pocket debian using native GUI interface
+# VNC must be started firstly. This can be done through "adlinux vnc" or starting tightvncserver in debian itself
+# Password is "archidroid"
 
-- Added Devil's Recovery
-# This is the only recovery with F2FS support for now, you can use above reworked method to flash it right from ArchiDroid itself
+- ADBLOCK: Fixed broken Wi-Fi tethering while AdBlock was active
+- ADBLOCK: Fixed being unable to access network when router didn't allow for querying non-local DNS servers
+- Updated PA GAPPS to 0102
+- Updated Boeffla Kernel to 2.2-beta1
+- Updated Googy Max Kernel to 2.1.4
+- Updated Devil Kernel to 2.4.7 (with f2fs support!)
+>>>>>>> 5256fd3... Gapps update
+- Updated SuperSU to 1.91
+<<<<<<< HEAD
+- Updated XPrivacy to 1.99.9
+- Updated sources
 
+=======
+- Updated XPrivacy to 1.99.23
+<<<<<<< HEAD
+=======
+- Updated MX Player to 1.7.23
+- Updated PhilZ Touch Recovery to 6.12.8
+>>>>>>> 160175a... MX Player 1.7.23
+- Updated sources
+>>>>>>> df86b96... XPrivacy 1.99.23
+=======
+- [!] Implemented F2FS
+# Don't touch it yet unless you want to brick your device
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+- Fixed AdBlock not working on some kernels
+>>>>>>> 81b6a9c... Make sure that AdBlock hosts are available
+=======
+=======
 - ADBLOCK: Added FORCE_LOCAL_DNSES, which may be useful in case of wrong answers from global DNSes but good from local ones, which are slower than global ones. Disabled by default
-- ADBLOCK: Fixed adblock not working on some kernels
-- Xposed is now pre-activated if chosen in aroma, this also acts as a nice workaround for failed xposed install on f2fs /system (accidentally)
-- Updated Devil Kernel to 2.4.8
-- Updated Spirit2 to 0130
+>>>>>>> 85f6d58... ADBLOCK: Add FORCE_LOCAL_DNSES
+- Fixed AdBlock not working on some kernels
+- Xposed is now pre-activated if chosen in aroma
+>>>>>>> 53b514f... Make xposed pre-activated

@@ -339,11 +339,13 @@ while (! pgrep com.android && [ $LOOP -lt 300 ]) || [ $FORCEDSEMAPHORE -eq 1 ] ;
 			done
 
 			DBUPDATE secure advanced_reboot 1
-			DBUPDATE global transition_animation_scale 0.5
-			DBUPDATE global animator_duration_scale 0.5
-			DBUPDATE global window_animation_scale 0.5
+			DBUPDATE global transition_animation_scale 0.0
+			DBUPDATE global animator_duration_scale 0.0
+			DBUPDATE global window_animation_scale 0.0
 			DBUPDATE global wifi_scan_always_enabled 0
 			DBUPDATE global install_non_market_apps 1
+			DBUPDATE global package_verifier_enable 0
+			DBUPDATE system haptic_feedback_enabled 0
 			DBUPDATE global development_settings_enabled 1
 			DBUPDATE global adb_enabled 0
 
