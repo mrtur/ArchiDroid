@@ -450,26 +450,26 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 #	endif;
 
 	# DATA
-#	if file_getprop("/tmp/aroma-data/archidroidfs.prop","data") != "current" then
-#	pleasewait("Executing Shell...");
-#	setvar("resexec_datafs", resexec("exec/archidroid_detect_zip.sh"));
-#		if getvar("resexec_datafs") == "1" then
-#			if file_getprop("/tmp/aroma-data/archidroidfs.prop","data") == "f2fs" then
-#				pleasewait("Reformatting...");
-#				setvar("resexec_retstatus",resexec("exec/adreformat.sh", "/data", "f2fs"));
-#				textbox("ArchiDroid Partition Wizard", "<~archidroid.partition.wizard.finish.desc>", "@default", getvar("exec_buffer")+"\n\n<b>RETURN STATUS : "+getvar("resexec_retstatus"));
-#			endif;
-#			if file_getprop("/tmp/aroma-data/archidroidfs.prop","data") == "ext4" then
-#				pleasewait("Reformatting...");
-#				setvar("resexec_retstatus",resexec("exec/adreformat.sh", "/data", "ext4"));
-#				textbox("ArchiDroid Partition Wizard", "<~archidroid.partition.wizard.finish.desc>", "@default", getvar("exec_buffer")+"\n\n<b>RETURN STATUS : "+getvar("resexec_retstatus"));
-#			endif;
-#			resexec("exec/admount.sh", "/data");
-#			resexec("exec/archidroid_init.sh");
-#		else
-#			alert("ArchiDroid Partition Wizard","<~archidroid.partition.wizard.warningintsd>","@alert");
-#		endif;
-#	endif;
+	if file_getprop("/tmp/aroma-data/archidroidfs.prop","data") != "current" then
+	pleasewait("Executing Shell...");
+	setvar("resexec_datafs", resexec("exec/archidroid_detect_zip.sh"));
+		if getvar("resexec_datafs") == "1" then
+			if file_getprop("/tmp/aroma-data/archidroidfs.prop","data") == "f2fs" then
+				pleasewait("Reformatting...");
+				setvar("resexec_retstatus",resexec("exec/adreformat.sh", "/data", "f2fs"));
+				textbox("ArchiDroid Partition Wizard", "<~archidroid.partition.wizard.finish.desc>", "@default", getvar("exec_buffer")+"\n\n<b>RETURN STATUS : "+getvar("resexec_retstatus"));
+			endif;
+			if file_getprop("/tmp/aroma-data/archidroidfs.prop","data") == "ext4" then
+				pleasewait("Reformatting...");
+				setvar("resexec_retstatus",resexec("exec/adreformat.sh", "/data", "ext4"));
+				textbox("ArchiDroid Partition Wizard", "<~archidroid.partition.wizard.finish.desc>", "@default", getvar("exec_buffer")+"\n\n<b>RETURN STATUS : "+getvar("resexec_retstatus"));
+			endif;
+			resexec("exec/admount.sh", "/data");
+			resexec("exec/archidroid_init.sh");
+		else
+			alert("ArchiDroid Partition Wizard","<~archidroid.partition.wizard.warningintsd>","@alert");
+		endif;
+	endif;
 
 	#########################
 	### ARCHIDROID DETECT ###
@@ -484,6 +484,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		#-- Run Shell
 		resexec("exec/archidroid_detect.sh")
 	);
+	if getvar("resexec_retstatus")=="0" || getvar("resexec_retstatus")=="1" then
 		if confirm(
 			#-- Title
 			"ArchiDroid Detect",
@@ -505,7 +506,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 			alert("ArchiDroid Detect","<~archidroid.detect.fail.alert.no>","@alert");
 			setvar("resexec_retstatus","2");
 		endif;
-
+	endif;
 	if getvar("resexec_retstatus")=="2" then
 		if confirm(
 			#-- Title
@@ -551,9 +552,9 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 				"wipe=yes\n"
 			);
 		endif;
-
 	endif;
 endif;
+
 
 ini_set("text_next", "<~common.flash>");
 
