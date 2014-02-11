@@ -499,19 +499,27 @@ if [ $ADRELOAD -eq 1 ]; then
 	echo "INFO: ArchiDroid RunOnce finished" >> $LOG
 	echo "`date`" >> $LOG
 	busybox sync
+<<<<<<< HEAD
 	tinyplay $ADSYS/system/reboot.wav > /dev/null 2>&1
 	reboot
 	#killall system_server
 	#sleep 10
+=======
+
+	#tinyplay $ADSYS/system/reboot.wav >/dev/null 2>&1
+	#reboot
+
+	tinyplay $ADSYS/system/reboot.wav >/dev/null 2>&1 &
+	setprop ctl.restart surfaceflinger
+	setprop ctl.restart zygote
+>>>>>>> 2d2ee1b... Add missing Init hook after soft reboot
 else
-	# We should call Init if reboot isn't required
-	sh /system/etc/init.d/99ArchiDroid_Init "background" "force" &
-
-	sleep 20
-	sysro || mount -o remount,ro /system
-
 	# Finish
 	echo "INFO: ArchiDroid RunOnce finished" >> $LOG
 	echo "`date`" >> $LOG
 fi
+
+sh /system/etc/init.d/99ArchiDroid_Init "background" "force" &
+sleep 20
+sysro || mount -o remount,ro /system
 exit 0
