@@ -474,11 +474,13 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 			alert("ArchiDroid Partition Wizard","<~archidroid.partition.wizard.warningintsd>","@alert");
 		endif;
 	endif;
+endif;
 
+if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") != "recovery" then
 	#########################
 	### ARCHIDROID DETECT ###
 	#########################
-	resexec("exec/admount.sh", "/system");
+
 	pleasewait("Executing Shell...");
 	#-- Resource Exec
 	setvar(
@@ -574,8 +576,6 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "recov
 else
 	ini_set("text_next", "<~common.finish>");
 endif;
-resexec("exec/admount.sh", "/system");
-resexec("exec/admount.sh", "/data");
 
 install(
 	#-- Title
