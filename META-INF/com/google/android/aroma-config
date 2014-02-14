@@ -471,30 +471,19 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 #		endif;
 #	endif;
 endif;
+
+if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") != "recovery" then
 	#########################
 	### ARCHIDROID DETECT ###
 	#########################
-#	resexec("exec/admount.sh", "/system");
-	pleasewait("Executing Shell...");
-	#-- Resource Exec
-	setvar(
-		#-- Save Return Status
-		"resexec_retstatus",
+	setvar("resexec_retstatus",resexec("exec/archidroid_detect.sh"));
 
-		#-- Run Shell
-		resexec("exec/archidroid_detect.sh")
-	);
 	if getvar("resexec_retstatus")=="0" || getvar("resexec_retstatus")=="1" then
 		if confirm(
-			#-- Title
 			"ArchiDroid Detect",
-			#-- Text
 			"<~archidroid.detect.fail>",
-			#-- Icon (Optional)
 			"@info",
-			#-- Yes Text
 			"<~archidroid.detect.fail.yes>",
-			#-- No Text
 			"<~archidroid.detect.fail.no>"
 		)=="yes" then
 			alert("ArchiDroid Detect","<~archidroid.detect.fail.alert.yes>","@info");
@@ -509,15 +498,10 @@ endif;
 	endif;
 	if getvar("resexec_retstatus")=="2" then
 		if confirm(
-			#-- Title
 			"ArchiDroid Detect",
-			#-- Text
 			"<~archidroid.detect.pass>",
-			#-- Icon (Optional)
 			"@info",
-			#-- Yes Text
 			"<~archidroid.detect.pass.yes>",
-			#-- No Text
 			"<~archidroid.detect.pass.no>"
 		)=="yes" then
 			writetmpfile(
@@ -526,11 +510,8 @@ endif;
 				"force=no\n"
 			);
 			if confirm(
-				#-- Title
 				"ArchiDroid Detect",
-				#-- Text
 				"<~archidroid.detect.force>",
-				#-- Icon (Optional)
 			"@alert"
 			)=="yes" then
 				writetmpfile(
@@ -553,7 +534,7 @@ endif;
 			);
 		endif;
 	endif;
-
+endif;
 
 
 ini_set("text_next", "<~common.flash>");
@@ -569,20 +550,13 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "recov
 else
 	ini_set("text_next", "<~common.finish>");
 endif;
-#resexec("exec/admount.sh", "/system");
-#resexec("exec/admount.sh", "/data");
+resexec("exec/admount.sh", "/system");
+resexec("exec/admount.sh", "/data");
 
 install(
-	#-- Title
 	"<~common.flashing>",
-
-	#-- Installation Process message
 	"<~archidroid.install.desc>",
-	
-	#-- Installation Icon
 	"@welcome",
-
-	#-- Installation Finish Message
 	"<~archidroid.install.finish>"
 );
 
@@ -593,11 +567,8 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "recov
 	resexec("exec/cmd.sh", "reboot", "recovery");
 else
 	if confirm(
-		#-- Title
 		"ArchiDroid Wizard",
-		#-- Text
 		"<~archidroid.wizard.reboot>",
-		#-- Icon (Optional)
 		"@confirm"
 	)=="yes" then
 		reboot("onfinish");
