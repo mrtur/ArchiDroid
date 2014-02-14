@@ -86,12 +86,9 @@ archidroid.partition.wizard.desc=ArchiDroid Partition Wizard shows only partitio
 \
 In addition to that, during repartitioning <b><#f00>ALL DATA WILL BE LOST</#></b>
 
-archidroid.filesystem.ext4.desc=Fourth Extended File System. Proven to be stable and reliable. Supported by all kernels
-archidroid.filesystem.f2fs.desc=Flash-Friendly File System. Optimized for NAND flash memory-based storage devices, gives significant I/O boost compared to EXT4. Supported only by a few custom kernels
-archidroid.partition.wizard.finish.desc=ArchiDroid Partition Wizard has finished repartitioning your partition. If RETURN STATUS is equal to 0, everything ended successfully
-archidroid.partition.wizard.warningintsd=<b><#f00>WARNING!</#></b> Repartitioning of /data isn't available during flashing ArchiDroid from internal sd card. Please use external one if you want to use this option
-archidroid.partition.wizard.warningcachelater=Cache partition will be repartitioned after flashing due to aroma and recovery limitations
-archidroid.partition.wizard.warningcache=As previously stated, ArchiDroid Partition Wizard will now reformat your cache partition. It will automatically reboot your device after finish (regardless of previous choice)
+archidroid.filesystem.ext4.desc=第四代针对EXT3系统的扩展日志式文件系统（EXT4）. 稳定可靠. 所有内核都支持
+archidroid.filesystem.f2fs.desc=闪存友好文件系统（F2FS）. 特别为NAND闪存存储设备优化, 与EXT4相比具有显著的 I/O 性能提升. 只被不多的第三方内核支持
+archidroid.partition.wizard.finish.desc=ArchiDroid 分区向导已经完成重新分区. 如果 RETURN STATUS （返回值）等于 0, 代表全部操作成功完成
 
 archidroid.preset.recovery.desc=Will flash recovery (only) instead of a ROM. May be useful if recovery update is required prior to flashing
 archidroid.recovery.philz.desc=The most feature-rich custom recovery ever created, developed by Phil
