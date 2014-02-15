@@ -604,7 +604,7 @@ resexec("exec/adumount.sh", "/system");
 resexec("exec/adumount.sh", "/data");
 
 if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "recovery" then
-	resexec("exec/rebootrecovery.sh");
+	resexec("exec/cmd.sh", "reboot", "recovery");
 else
 	if confirm(
 		"ArchiDroid Wizard",
