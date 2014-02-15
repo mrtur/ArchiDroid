@@ -417,7 +417,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 				"current","Current: "+getvar("preloadfs"),"","select.selected"
 			);
 		endif;
-	else
+#	else
 		if getvar("extsdinstall") == "1" then
 			# Variant 3, we DON'T have F2FS but we have extsd
 			form(
