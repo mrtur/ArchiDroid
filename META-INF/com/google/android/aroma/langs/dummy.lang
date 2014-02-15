@@ -169,7 +169,6 @@ archidroid.apps.rootbrowser.desc=Very cool browser extended by optional root acc
 archidroid.apps.adobeflash.desc=Adds flash content support. Does not work with Google Chrome
 
 archidroid.tweaks.buildtweaks.desc=Many build.prop tweaks, including deeper sleep, performance tweaks and more
-archidroid.tweaks.openpdroid.desc=Apply OpenPDroid patch after install if available
 archidroid.tweaks.nocell.desc=In general considered as bloatware. Uncheck if you want to keep this
 
 archidroid.preset.no=No Preset
@@ -188,6 +187,7 @@ archidroid.boeffla.yes.desc=If you want to create your own Boeffla SC preset lat
 archidroid.boeffla.no.desc=If you don't want to install Boeffla SC
 
 archidroid.xposed.appsettings.desc=Allows changing app settings. Extremely useful tool
+archidroid.xposed.gravitybox.desc=A complex and feature-rich customizable tweak box
 archidroid.xposed.xprivacy.desc=Perfect module which prevents leaking of private data, restricts access and more
 archidroid.xposed.wanam.desc=Masterpiece from Wanam. Enhances ArchiDroid's flexibility and provides a ton of customization options
 

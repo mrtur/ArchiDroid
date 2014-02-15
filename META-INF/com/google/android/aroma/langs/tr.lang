@@ -169,7 +169,6 @@ archidroid.apps.rootbrowser.desc=Kök dizinine erişebilen dosya yönetici.
 archidroid.apps.adobeflash.desc=Adobe Flash Player, Chrome ile çalışmaz.
 
 archidroid.tweaks.buildtweaks.desc=Pek çok build.prop optimizasyonları, performans ve şarj düzenlemeleri.
-archidroid.tweaks.openpdroid.desc=Mümkün olduğunda yükleme sonrasında OpenPDroid yaması uygula
 archidroid.tweaks.nocell.desc=Gereksiz olarak kabul edilir. Silmek istemiyorsanız seçmeyin.
 
 archidroid.preset.no=Ön ayar yok
@@ -188,6 +187,7 @@ archidroid.boeffla.yes.desc=Boeffla Ses Kontrol'ü kendiniz düzenlemek istiyors
 archidroid.boeffla.no.desc=Boeffla Ses Kontrol kullanmamak istiyorsaniz seçin.
 
 archidroid.xposed.appsettings.desc=Uygulama çalısma ayarlarını ayarlayabilirsiniz, önerilir.
+archidroid.xposed.gravitybox.desc=A complex and feature-rich customizable tweak box
 archidroid.xposed.xprivacy.desc=Uygulama izinlerini kontrol etmenizi sağlar.
 archidroid.xposed.wanam.desc=Masterpiece from Wanam. Enhances ArchiDroid's flexibility and provides a ton of customization options
 

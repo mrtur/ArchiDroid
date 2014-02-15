@@ -169,7 +169,6 @@ archidroid.apps.rootbrowser.desc=Πολύ καλός browser που υποστη
 archidroid.apps.adobeflash.desc=Προσθέτει υποστήριξη για περιεχόμενο flash. Δεν λειτουργεί με Google Chrome
 
 archidroid.tweaks.buildtweaks.desc=Πολλές βελτιώσεις στο build.prop, συμπεριλαμβανωμένων deeper sleep, βελτιώσεις απόδοσης και άλλα
-archidroid.tweaks.openpdroid.desc=Εφαρμογή OpenPDroid patch μετά την εγκατάσταση αν είναι διαθέσιμο
 archidroid.tweaks.nocell.desc=Γενικά θεωρείται ως bloatware. απόεπιλέξτε Εάν θέλετε να το κρατήσετε
 
 archidroid.preset.no=Κανένα Προφίλ
@@ -188,6 +187,7 @@ archidroid.boeffla.yes.desc=Εάν θέλετε να δημιουργήσετε 
 archidroid.boeffla.no.desc=Εάν δεν θέλετε να εγκαταστήσετε το Boeffla SC
 
 archidroid.xposed.appsettings.desc=Επιτρέπει την αλλαγή ρυθμίσεων των εφαρμογών. Τρομερά χρήσιμο εργαλείο
+archidroid.xposed.gravitybox.desc=A complex and feature-rich customizable tweak box
 archidroid.xposed.xprivacy.desc=Τέλειο πρόσθετο που απότρέπει τη διαρροή προσωπικών δεδομένων, περιορίζει την πρόσβαση και άλλα
 archidroid.xposed.wanam.desc=Αριστούργημα από τον Wanam. Βελτιώνει την ευελιξία του ArchiDroid και παρέχει πολλές ρυθμίσεις προσαρμογής
 

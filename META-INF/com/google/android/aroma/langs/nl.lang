@@ -169,7 +169,6 @@ archidroid.apps.rootbrowser.desc=Very cool browser extended by optional root acc
 archidroid.apps.adobeflash.desc=Voegt Flash ondersteuning toe. Werkt niet met Google Chrome
 
 archidroid.tweaks.buildtweaks.desc=Veel build.prop aanpassingen, waaronder diepere slaapstaand, snelheid en meer
-archidroid.tweaks.openpdroid.desc=Voeg OpenPDroid patch toe na installatie indien mogelijk.
 archidroid.tweaks.nocell.desc=Voor het algemeen gezien als bloatwareIn general considered as bloatware. Deselecteer als je dit wilt houden
 
 archidroid.preset.no=Geen profiel
@@ -188,6 +187,7 @@ archidroid.boeffla.yes.desc=Als je zelf je eigen Boeffla SC voorkeuren wil maken
 archidroid.boeffla.no.desc=Als je geen Boeffla SC wil installeren
 
 archidroid.xposed.appsettings.desc=Bied een makkelijke manier om de instellingen van elke app aan te passen. Zeer handige tool
+archidroid.xposed.gravitybox.desc=A complex and feature-rich customizable tweak box
 archidroid.xposed.xprivacy.desc=Perfecte module welke het lekken van prive data tegen gaat. Beperkt de toegang van een app en meer
 archidroid.xposed.wanam.desc=Masterpiece from Wanam. Enhances ArchiDroid's flexibility and provides a ton of customization options
 

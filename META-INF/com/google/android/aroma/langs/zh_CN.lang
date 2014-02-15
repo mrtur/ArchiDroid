@@ -169,7 +169,6 @@ archidroid.apps.rootbrowser.desc=可选 root 权限拓展，非常酷的Root浏�
 archidroid.apps.adobeflash.desc=增加 flash 内容支持. 与 Google Chrome 不兼容
 
 archidroid.tweaks.buildtweaks.desc=诸多 build.prop 微调, 包含深度睡眠、性能微调及其他
-archidroid.tweaks.openpdroid.desc=如果可以，安装结束后应用 OpenPDroid 补丁
 archidroid.tweaks.nocell.desc=通常被认为是臃肿软件. 如果想保留这个取消选择
 
 archidroid.preset.no=不使用预设设置
@@ -188,6 +187,7 @@ archidroid.boeffla.yes.desc=如果你之后想创建自己的 Boeffla Sound Cont
 archidroid.boeffla.no.desc=如果不想安装 Boeffla Sound Control
 
 archidroid.xposed.appsettings.desc=允许更改 APP 设置. 特别有用的工具
+archidroid.xposed.gravitybox.desc=一个尽管有些复杂但功能全面的定制微调工具箱
 archidroid.xposed.xprivacy.desc=能防止泄露个人数据,限制权限，拥有更多功能的极佳模块
 archidroid.xposed.wanam.desc=Wanam 杰作. 增强 ArchiDroid 顺滑度提供大量自定义选项
 
