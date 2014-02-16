@@ -3,13 +3,15 @@ ArchiDroid 2.3.6
 - [!] Implemented ArchiDroid Partition Wizard and full F2FS support for /system /preload /cache(*) /data(*)
 # Option for reformatting to F2FS is only available if your custom recovery and chosen kernel support it
 # Reformatting is optional, by default ArchiDroid won't perform any action
-# (*) /data doesn't work with F2FS yet due to kernel bug in Devil's kernel, fixed in 2.4.8 (?)
-# (*) /cache is not being able to reformat back to ext4 from ArchiDroid Partition Wizard, while you can't reformat /data at all if you're flashing from internal sd card. This is on my todo
+# Please note that you can't reformat /cache due to mount-lock of installer, and /data if you're flashing from internal sd card
+# Those partitions can be reformatted manually from recovery if needed
 
 - [!] Reworked recovery flashing
 # Now you can flash recovery TRULY before ArchiDroid flashing
 # If you choose recovery flashing option, ArchiDroid won't be flashed at all, instead, it will flash your recovery and then reboot it (recovery)
 # If any recovery update will be needed in the future, this way you won't need to do it manually anymore (as long as proper recovery is available in ArchiDroid)
+
+- [!] Updated sources # TAG=android-4.4.2_r2 BUILD_ID=KVT49L
 
 - Added Devil's Recovery
 # This is the only recovery with F2FS support for now, you can use above reworked method to flash it right from ArchiDroid itself
@@ -23,10 +25,16 @@ ArchiDroid 2.3.6
 - ADBLOCK: Added FORCE_LOCAL_DNSES, which may be useful in case of wrong answers from global DNSes but good from local ones, which are slower than global ones. Disabled by default
 - ADBLOCK: Fixed adblock not working on some kernels
 - Added GravityBox Xposed module
+- Enabled transparent lockscreen and disabled keyboard animations through RunOnce. As always - at least forced update is required in order to apply those tweaks
 - Xposed is now pre-activated if chosen in aroma, this also acts as a nice workaround for failed xposed install on f2fs /system (accidentally)
 - Enabled SuperSU Pro features for all (shh!)
 - Removed OpenPDroid # It's EOL'ed now
-- Updated Devil Kernel to [3.]0.1.0
+- Updated Boeffla kernel to 2.2-beta4
+- Updated Archi's profiles for Boeffla kernel
+- Updated Yank kernel to 1.6j
+- Updated Devil kernel to [3.]0.1.0
+- Updated Googy Max kernel to 2.1.5
+- Updated PA Gapps to latest micro version and debloated it even more
 - Updated Spirit2 to 0130
 - Updater SuperSU to 1.93
 - Updated Greenify to 2.1
