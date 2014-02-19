@@ -1,3 +1,3 @@
-post-build=google/omni_mako/mako:4.4.2/KVT49L/144:userdebug/test-keys
-post-timestamp=1392472690
+post-build=google/omni_mako/mako:4.4.2/KVT49L/147:userdebug/test-keys
+post-timestamp=1392736816
 pre-device=mako
