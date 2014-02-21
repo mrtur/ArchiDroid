@@ -23,7 +23,7 @@ ADALIAS() {
 ADTWEAK() {
 	# $1 - what we're changing
 	# $2 - to what we're changing
-	local CURRENT=`cat "$1"`
+	local CURRENT=$(cat "$1")
 	if [ "$CURRENT" == "$2" ]; then
 		echo "ADTWEAK: Value of $1 is already set to $CURRENT" >> $LOG
 	else
@@ -70,30 +70,25 @@ ADLOAD() {
 					fi
 				fi
 				sysro
-				if [ $APPENDDNSES -eq 1 ]; then
-					local DNS=""
-					DNS1=`getprop net.dns1`
-					DNS2=`getprop net.dns2`
+				if [ $ADBLOCKLOCALDNSES -eq 1 ]; then
+					DNS=""
+					DNS1=$(getprop net.dns1)
+					DNS2=$(getprop net.dns2)
 					echo "ADBLOCK: Including local DNSes!" >> $LOG
-					if [ $DNSDAEMON -eq 1 ]; then
-						archidroid_dnsdaemon "background" &
-						APPENDDNSES=0
-					elif [ -z "$DNS1" ] && [ $RELOAD -eq 0 ]; then
-						echo "ADBLOCK: No local DNSes found, I'll try to hook them up later" >> $LOG
-					else
-						APPENDDNSES=0
-					fi
+					archidroid_dnsdaemon "background" &
+				else
+					echo "STOPPED" > $DNSDAEMONSTATUS
 				fi
 				echo "ADBLOCK: Activated archidroid_dnsmasq - local DNS server on 127.0.0.1:53, forwarding clean non-blocked traffic to specified DNS servers" >> $LOG
-				local EXTRA="--all-servers "
+				local EXTRA="--all-servers"
 				if [ ! -z "$DNS1" ]; then
-					local DNS="-S $DNS1"
+					DNS="-S $DNS1"
 					if [ ! -z "$DNS2" ]; then
-						local DNS+=" -S $DNS2"
+						DNS+=" -S $DNS2"
 					fi
 					if [ $ADBLOCKSTRICTORDER -eq 1 ]; then
 						echo "ADBLOCK: Strict order enabled!" >> $LOG
-						EXTRA+="--strict-order "
+						EXTRA+=" --strict-order"
 					fi
 					archidroid_dnsmasq $EXTRA $DNS -C /system/archidroid/etc/dnsmasq.conf
 					echo "ADBLOCK: Also added local DNS servers $DNS1 $DNS2" >> $LOG
@@ -102,7 +97,7 @@ ADLOAD() {
 				fi
 				archidroid_dnsproxy2 -w 127.0.0.1 &
 				echo "ADBLOCK: Activated archidroid_dnsproxy2 - local proxy server, forwarding all DNS traffic to 127.0.0.1:53" >> $LOG
-				archidroid_pixelserv 127.0.0.1 >/dev/null 2>&1
+				archidroid_pixelserv 127.0.0.1
 				echo "ADBLOCK: Activated archidroid_pixelserv - local web server on 127.0.0.1:80, responding with NULLGIF" >> $LOG
 				echo "INFO: ArchiDroid's AdBlock activated!" >> $LOG
 			else
@@ -237,6 +232,7 @@ ADDEV="$ADSYS/dev"
 LOG="$AD/Init.log" # "/dev/null" is no verbose
 RUNONCELOG="$AD/RunOnce.log"
 ADSTATUS="/dev/ARCHIDROID_INIT_STATUS"
+DNSDAEMONSTATUS="/dev/ARCHIDROID_DNSDAEMON_STATUS"
 
 if [ ! -e $AD ]; then
 	exit 0
@@ -260,19 +256,14 @@ fi
 if [ -e $ADDEV/ADBLOCK_ENABLED ]; then
 	ADBLOCK=1
 	if [ -e $ADDEV/ADBLOCK_LOCAL_DNSES_ENABLED ]; then
-		APPENDDNSES=1
-		if [ -e $ADDEV/ADBLOCK_LOCAL_DNSES_DAEMON_ENABLED ]; then
-			DNSDAEMON=1
-		else
-			DNSDAEMON=0
-		fi
+		ADBLOCKLOCALDNSES=1
 		if [ -e $ADDEV/ADBLOCK_FORCE_LOCAL_DNSES ]; then
 			ADBLOCKSTRICTORDER=1
 		else
 			ADBLOCKSTRICTORDER=0
 		fi
 	else
-		APPENDDNSES=0
+		ADBLOCKLOCALDNSES=0
 	fi
 else
 	ADBLOCK=0
@@ -289,7 +280,7 @@ elif [ ! -e $ADSTATUS ]; then
 	# First boot, good
 	echo $$ > $ADSTATUS
 else
-	ADSIGNAL=`cat $ADSTATUS`
+	ADSIGNAL=$(cat $ADSTATUS)
 	if [ $ADSIGNAL == "FINISHED" ]; then
 		# Something tried to execute already finished init, halt
 		echo "This script has been executed already"
@@ -325,9 +316,9 @@ for ARG in $@; do
 done
 
 
-echo "`date`" >> $LOG
-echo "ArchiDroid `getprop ro.archidroid.version`" >> $LOG
-echo "`uname -a`" >> $LOG
+echo "$(date)" >> $LOG
+echo "ArchiDroid $(getprop ro.archidroid.version)" >> $LOG
+echo "$(uname -a)" >> $LOG
 echo "INFO: ArchiDroid_Init executed!" >> $LOG
 
 # Now we need to make sure that this is background process to prevent slowing down bootup
@@ -356,9 +347,9 @@ fi
 # 1 - Sammy
 # 2 - Omni
 ROM=1 # Default to sammy
-if [ `cat /system/build.prop | grep "ro.omni.version" | wc -l` -gt 0 ]; then
+if [ $(cat /system/build.prop | grep "ro.omni.version" | wc -l) -gt 0 ]; then
 	ROM=2 # OK, definitely Omni
-elif [ `cat /system/build.prop | grep "ro.cm.version" | wc -l` -gt 0 ]; then
+elif [ $(cat /system/build.prop | grep "ro.cm.version" | wc -l) -gt 0 ]; then
 	ROM=0 # OK, definitely CM
 fi
 
@@ -395,11 +386,11 @@ ADLOAD "ADBLOCK"
 if [ $ROM -eq 9 ]; then #Always false
 	echo "INFO: Performing VACUUM & REINDEX of databases" >> $LOG
 	mount -o remount,rw /
-	for i in `busybox find /data/data -iname "*.db"`; do
+	for i in $(busybox find /data/data -iname "*.db"); do
 		sqlite3 $i 'VACUUM;'
 		sqlite3 $i 'REINDEX;'
 	done
-	for i in `busybox find /data/system -iname "*.db"`; do
+	for i in $(busybox find /data/system -iname "*.db"); do
 		sqlite3 $i 'VACUUM;'
 		sqlite3 $i 'REINDEX;'
 	done
@@ -450,7 +441,7 @@ while ! pgrep com.android && [ $LOOP -lt 300 ] ; do
 *******************************************************************************
 "
 	fi
-	LOOP=`expr $LOOP + 1`
+	LOOP=$(expr $LOOP + 1)
 	sleep 2
 done
 
@@ -495,13 +486,13 @@ if [ ! -z $(which ARCHIDROID_RUNONCE) ]; then
 fi
 
 # Mount external sd card if needed
-if [ -e /dev/block/mmcblk1p1 ] && [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] && [ `mount | grep -i "extSdCard" | wc -l` -eq 0 ]; then
+if [ -e /dev/block/mmcblk1p1 ] && [ $(mount | grep -i "sdcard1" | wc -l) -eq 0 ] && [ $(mount | grep -i "extSdCard" | wc -l) -eq 0 ]; then
 	# Initial idea by AndiP71, aka Lord Boeffla
 	# Further improvements by JustArchi
 
 	echo "INFO: Detected sd card but it's not mounted yet, mounting..." >> $LOG
 	KEEPGOING=1
-	if [ `lsmod | grep "exfat" | wc -l` -eq 0 ]; then
+	if [ $(lsmod | grep "exfat" | wc -l) -eq 0 ]; then
 		echo "WARNING: No exfat module found, it's either compiled in kernel or not loaded. Blindly loading..." >> $LOG
 		busybox insmod /system/lib/modules/exfat_core.ko >/dev/null 2>&1
 		busybox insmod /system/lib/modules/exfat_fs.ko >/dev/null 2>&1
@@ -520,7 +511,7 @@ if [ -e /dev/block/mmcblk1p1 ] && [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] 
 		EXTSDMOUNT="/dev/block/vold/179:49"
 		echo "INFO: Mounting through vold 179:49!" >> $LOG
 		busybox mount -t auto $EXTSDMOUNT $EXTSDPATH >/dev/null 2>&1
-		if [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] && [ `mount | grep -i "extSdCard" | wc -l` -eq 0 ]; then
+		if [ $(mount | grep -i "sdcard1" | wc -l) -eq 0 ] && [ $(mount | grep -i "extSdCard" | wc -l) -eq 0 ]; then
 			echo "WARNING: Failed!" >> $LOG
 		else
 			echo "INFO: Success!" >> $LOG
@@ -532,7 +523,7 @@ if [ -e /dev/block/mmcblk1p1 ] && [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] 
 		EXTSDMOUNT="/dev/block/mmcblk1p1"
 		echo "INFO: Mounting through mmcblk1p1!" >> $LOG
 		busybox mount -t auto $EXTSDMOUNT $EXTSDPATH >/dev/null 2>&1
-		if [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] && [ `mount | grep -i "extSdCard" | wc -l` -eq 0 ]; then
+		if [ $(mount | grep -i "sdcard1" | wc -l) -eq 0 ] && [ $(mount | grep -i "extSdCard" | wc -l) -eq 0 ]; then
 			echo "WARNING: Failed!" >> $LOG
 		else
 			echo "INFO: Success!" >> $LOG
@@ -550,7 +541,7 @@ if [ -e /dev/block/mmcblk1p1 ] && [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] 
 		mount -t exfat $EXTSDMOUNT $EXTSDPATH >/dev/null 2>&1
 		mount -t ext4 $EXTSDMOUNT $EXTSDPATH >/dev/null 2>&1
 		mount -t vfat $EXTSDMOUNT $EXTSDPATH >/dev/null 2>&1
-		if [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] && [ `mount | grep -i "extSdCard" | wc -l` -eq 0 ]; then
+		if [ $(mount | grep -i "sdcard1" | wc -l) -eq 0 ] && [ $(mount | grep -i "extSdCard" | wc -l) -eq 0 ]; then
 			echo "WARNING: Failed!" >> $LOG
 		else
 			echo "INFO: Success!" >> $LOG
@@ -558,7 +549,7 @@ if [ -e /dev/block/mmcblk1p1 ] && [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] 
 		fi
 	fi
 
-	if [ `mount | grep -i "sdcard1" | wc -l` -eq 0 ] && [ `mount | grep -i "extSdCard" | wc -l` -eq 0 ]; then
+	if [ $(mount | grep -i "sdcard1" | wc -l) -eq 0 ] && [ $(mount | grep -i "extSdCard" | wc -l) -eq 0 ]; then
 			echo "ERROR: I failed to mount external sd card with automatic filesystem. Giving up here!" >> $LOG
 	else
 		echo "INFO: Successfully mounted external sd card!" >> $LOG
@@ -570,5 +561,5 @@ fi
 # Finish
 echo "FINISHED" > $ADSTATUS
 echo "INFO: ArchiDroid Init finished" >> $LOG
-echo "`date`" >> $LOG
+echo "$(date)" >> $LOG
 exit 0
