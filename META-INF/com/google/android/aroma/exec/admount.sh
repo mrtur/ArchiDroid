@@ -17,7 +17,7 @@ AUTO="/system /cache /data" # Filesystems which should be mounted automatically 
 
 GOTBUSYBOX=false
 GOTMOUNT=false
-LOG="/tmp/archidroid_mount.log" # We can use /dev/null if not required
+LOG="/tmp/mrturdroid_mount.log" # We can use /dev/null if not required
 
 ADMOUNTED() {
 	if [ $(mount | grep -i "$1" | wc -l) -gt 0 ]; then
