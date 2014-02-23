@@ -5,9 +5,10 @@
 #exit 1
 
 # Common
-VERSION=2.3.6
+VERSION=2.3.7
 STABLE=0
 NOSYNC=0
+NOGIT=0
 SAMMY=0
 BPROP=0
 NOOPD=1
@@ -33,6 +34,10 @@ for ARG in "$@" ; do
 			nosync)
 				NOSYNC=1
 				echo "WARNING: Not updating repos!"
+				;;
+			nogit)
+				NOGIT=1
+				echo "WARNING: Not updating local repos!"
 				;;
 			noopd)
 				NOOPD=1
@@ -65,8 +70,10 @@ DENSITY="#ro.sf.lcd_density=320"
 
 if [ $SAMMY -eq 0 ] && [ $NOBUILD -eq 0 ]; then
 	if [ $NOSYNC -eq 0 ]; then
-		cd /root/git/auto
-		bash updaterepos.sh
+		if [ $NOGIT -eq 0 ]; then
+			cd /root/git/auto
+			bash updaterepos.sh
+		fi
 		cd /root/android/omni/out/target/product/i9300
 		if [ $? -eq 0 ]; then
 			for f in `ls` ; do
