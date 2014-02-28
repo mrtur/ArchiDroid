@@ -29,4 +29,5 @@ ArchiDroid 2.3.6
 
 - Updated PA GAPPS to 27Feb
 - Updated Cool Tool to 5.3.4
+- Updated XPrivacy to 1.99.61
 
