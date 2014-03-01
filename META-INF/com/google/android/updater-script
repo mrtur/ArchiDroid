@@ -207,10 +207,10 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 			"/system/bin/mkdir", "/system/bin/mkswap", "/system/bin/mount",
 			"/system/bin/mv", "/system/bin/nandread", "/system/bin/netstat",
 			"/system/bin/newfs_msdos", "/system/bin/notify", "/system/bin/printenv",
-			"/system/bin/ps", "/system/bin/r", "/system/bin/readlink",
-			"/system/bin/renice", "/system/bin/restorecon", "/system/bin/rm",
-			"/system/bin/rmdir", "/system/bin/rmmod", "/system/bin/route",
-			"/system/bin/runcon", "/system/bin/schedtop", "/system/bin/sendevent",
+			"/system/bin/ps", "/system/bin/readlink", "/system/bin/renice",
+			"/system/bin/restorecon", "/system/bin/rm", "/system/bin/rmdir",
+			"/system/bin/rmmod", "/system/bin/route", "/system/bin/runcon",
+			"/system/bin/schedtop", "/system/bin/sendevent",
 			"/system/bin/setconsole", "/system/bin/setenforce",
 			"/system/bin/setprop", "/system/bin/setsebool", "/system/bin/sleep",
 			"/system/bin/smd", "/system/bin/start", "/system/bin/stop",
@@ -238,7 +238,6 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 	set_metadata("/system/bin/app_process", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:zygote_exec:s0");
 	set_metadata("/system/bin/clatd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:clatd_exec:s0");
 	set_metadata("/system/bin/debuggerd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:debuggerd_exec:s0");
-	set_metadata("/system/xbin/debuggerd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:debuggerd_exec:s0");
 	set_metadata("/system/bin/dhcpcd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dhcp_exec:s0");
 	set_metadata("/system/bin/dnsmasq", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dnsmasq_exec:s0");
 	set_metadata("/system/bin/drmserver", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drmserver_exec:s0");
@@ -276,9 +275,6 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 	set_metadata_recursive("/system/vendor/lib/drm", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 	set_metadata("/system/vendor/lib/drm/libdrmwvmplugin.so", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 	set_metadata_recursive("/system/xbin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-	set_metadata("/system/xbin/librank", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-	set_metadata("/system/xbin/procmem", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-	set_metadata("/system/xbin/procrank", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 
 	# ArchiDroid
 	set_metadata("/system/xbin/su", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:su_exec:s0");
@@ -559,6 +555,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		### TOUCHPAL ###
 		if file_getprop("/tmp/aroma-data/archidroid.prop","keyboard") == "touchpal" then
 			delete("/system/app/LatinIME.apk");
+			delete("/system/app/LatinIME.odex");
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing TouchPal Keyboard");
 			package_extract_dir("_archidroid/apps/touchpal", "/");
 		endif;
@@ -567,6 +564,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		if file_getprop("/tmp/aroma-data/archidroid.prop","keyboard") == "hackers" then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Hacker's Keyboard");
 			delete("/system/app/LatinIME.apk");
+			delete("/system/app/LatinIME.odex");
 			package_extract_dir("_archidroid/apps/hackers", "/");
 		endif;
 
@@ -574,6 +572,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		if file_getprop("/tmp/aroma-data/archidroid.prop","keyboard") == "both" then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing TouchPal + Hacker's Keyboard");
 			delete("/system/app/LatinIME.apk");
+			delete("/system/app/LatinIME.odex");
 			package_extract_dir("_archidroid/apps/touchpal", "/");
 			package_extract_dir("_archidroid/apps/hackers", "/");
 		endif;
@@ -589,6 +588,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 			# Just delete LatinIME then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Skipping Keyboard");
 			delete("/system/app/LatinIME.apk");
+			delete("/system/app/LatinIME.odex");
 		endif;
 
 		set_progress(0.74);
@@ -601,9 +601,17 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		### NOVA ###
 		if file_getprop("/tmp/aroma-data/archidroid.prop","launcher") == "nova" then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Nova Launcher");
-			delete("/system/app/Launcher3.apk");
 			delete("/system/priv-app/Launcher3.apk");
+			delete("/system/priv-app/Launcher3.odex");
 			package_extract_dir("_archidroid/apps/nova", "/");
+		endif;
+
+		### GOOGLE ###
+		if file_getprop("/tmp/aroma-data/archidroid.prop","launcher") == "google" then
+			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Google Launcher");
+			delete("/system/priv-app/Launcher3.apk");
+			delete("/system/priv-app/Launcher3.odex");
+			package_extract_dir("_archidroid/apps/googlelauncher", "/");
 		endif;
 
 		### STOCK ###
@@ -616,8 +624,8 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		if file_getprop("/tmp/aroma-data/archidroid.prop","launcher") == "none" then
 			# Just delete Launcher then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Skipping Launcher");
-			delete("/system/app/Launcher3.apk");
 			delete("/system/priv-app/Launcher3.apk");
+			delete("/system/priv-app/Launcher3.odex");
 		endif;
 
 		set_progress(0.75);
@@ -701,6 +709,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		if file_getprop("/tmp/aroma-data/archidroid.prop","nocell") == "1" then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Removing Cell Broadcasts");
 			delete("/system/app/CellBroadcastReceiver.apk");
+			delete("/system/app/CellBroadcastReceiver.odex");
 		endif;
 
 		set_progress(0.77);
