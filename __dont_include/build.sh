@@ -5,7 +5,7 @@
 #exit 1
 
 # Common
-VERSION=2.3.8
+VERSION=2.3.9
 STABLE=0
 NOSYNC=0
 NOGIT=0
@@ -84,7 +84,7 @@ if [ $SAMMY -eq 0 ] && [ $NOBUILD -eq 0 ]; then
 		fi
 		cd /root/android/omni
 		repo selfupdate
-		repo sync -j16
+		repo sync -c -j16
 
 		# Apply all temporary patches
 		bash ../../shared/git/ArchiDroid/__dont_include/patches.sh
@@ -96,7 +96,7 @@ if [ $SAMMY -eq 0 ] && [ $NOBUILD -eq 0 ]; then
 	fi
 	
 	source build/envsetup.sh
-	brunch i9300
+	brunch i9300 user
 	cd $OUT
 	cp omni-*.zip /root/shared/git/ArchiDroid
 fi
