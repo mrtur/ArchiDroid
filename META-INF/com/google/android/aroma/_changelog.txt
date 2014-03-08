@@ -1,5 +1,6 @@
 
-- Recompiled common ArchiDroid binaries (haveged, dnsmasq, dnsproxy2, pixelserv) to latest versions, added SGS3-optimizations including NEON
+- BACKEND: Added inotify-tools (inotifywait & inotifywatch commands)
+- BACKEND: Recompiled common ArchiDroid binaries (haveged, dnsmasq, dnsproxy2, pixelserv) to latest versions, added SGS3-optimizations including NEON
 - Updated Android Terminal Emulator to 1.0.57
 - Updated MX Player to 1.7.25
 
