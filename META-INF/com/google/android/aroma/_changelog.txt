@@ -1,4 +1,8 @@
 
+- [!] Implemented ARCHIDROID_CRON
+# ARCHIDROID_CRON is the ultimate solution for all housekeeping ArchiDroid tasks
+# More info comming soon
+
 - BACKEND: Added inotify-tools (inotifywait & inotifywatch commands)
 - BACKEND: Recompiled common ArchiDroid binaries (haveged, dnsmasq, dnsproxy2, pixelserv) to latest versions, added SGS3-optimizations including NEON
 - Updated Android Terminal Emulator to 1.0.57
