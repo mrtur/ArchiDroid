@@ -29,14 +29,14 @@
 # Initializing Rom Information
 ##
 
-setvar("preset_version","7");
+setvar("preset_version","8");
 
 ini_set("dp","3");
 ini_set("rom_name",             "ArchiDroid");
 ini_set("rom_version",          "2.3.9");
 ini_set("rom_author",           "JustArchi");
 ini_set("rom_device",           "Samsung Galaxy S3");
-ini_set("rom_date",             "March XXth, 2014");
+ini_set("rom_date",             "March 15th, 2014");
 
 ##
 # Show Animated Splash
@@ -263,7 +263,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"other","<#selectbg_g><~archidroid.other></#>","","group",
 		"archidroidota","ArchiDroid OTA","<~archidroid.ota.desc>","check.checked",
 		"xposed","Xposed Framework","<~archidroid.xposed.desc>","check.checked",
-		"updatemodem","<~archidroid.updatemodem> [XXUGMK6]","<~archidroid.updatemodem.desc>","check",
+		"updatemodem","<~archidroid.updatemodem> [XXUGNA8]","<~archidroid.updatemodem.desc>","check",
 
 		"googleapps","<#selectbg_g>Google Apps</#>","","group",
 		"gapps","Google Apps","<~archidroid.gapps.desc>","check.checked",
