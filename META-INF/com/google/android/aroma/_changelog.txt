@@ -20,4 +20,19 @@
 - Updated XPrivacy do 2.0.4
 - Updated PhilZ Touch recovery to 6.19.3
 - Updated sources
+- Improved internal ArchiDroid components used during flashing
+- Added 260 DPI and 300 DPI, thanks to above
+- Updated Boeffla kernel to 2.2-rc1
+- Updated AGNi kernel to 2.7.5
+- Updated Devil kernel to 3.4_0.1.4
+- Updated Googy Max kernel to 2.1.9
+- Updated Google Play to 4.6.17
+- Updated PA GAPPS to 21-03
+- Updated Spirit 2 to 20-03
+- Updated LMT to 2.0
+- Updated BetterBatteryStats to 1.16.0.0 B3
+- Updated Xposed to 2.5-beta2
+- Updated GravityBox to 3.0.0
+- Updated XPrivacy to 2.0.9
+- Updated sources (Blacklist support under security, bunch of i9300 commits by @UtkarshGupta and much more)
 
