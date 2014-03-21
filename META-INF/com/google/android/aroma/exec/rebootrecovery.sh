@@ -21,23 +21,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# exit 0 -> Internal error, no build.prop detected. Full wipe?
-# exit 1 -> All fine, we're NOT running ArchiDroid
-# exit 2 -> All fine, we're running ArchiDroid
+reboot recovery &
 
-if [ -e /system/build.prop ]; then
-	# Good
-	if [ $(cat /system/build.prop | grep -i "ArchiDroid" | wc -l) -gt 0 ]; then
-		# Yay we're running ArchiDroid"
-		exit 2
-	else
-		# We're not running ArchiDroid
-		exit 1
-	fi
-else
-	# Report internal error
-	exit 0
-fi
-
+# In some recent versions of CWM, reboot recovery command isn't working properly, it's stuck
+# We should keep this fallback for a while
+# If reboot in fact works, 5 seconds will be enough to sync and reboot device
+sleep 5
 sync
+echo 1 > /proc/sys/kernel/sysrq # HARD
+echo b > /proc/sysrq-trigger # REBOOT
+
 exit 0
