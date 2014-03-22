@@ -130,12 +130,12 @@ archidroid.launcher.nova.desc=更加顺滑，性能更好，推荐！
 archidroid.launcher.stock.desc=ROM 自带
 archidroid.launcher.none.desc=不含启动器.警告! 在完全擦除之后不要勾选! 第一次启动之前你需要至少一个第三方启动器!
 
-archidroid.keyboard=键盘
-archidroid.keyboard.touchpal.desc=推荐强大顺滑的 Swype/Curve 键盘
-archidroid.keyboard.hackers.desc=TouchPal(触宝国际版) 的极好的替代选择，如果用不到 swype/curve 的功能
-archidroid.keyboard.both.desc=同时使用 TouchPal(触宝国际版) 和 Hacker键盘 (例如在终端中)
-archidroid.keyboard.stock.desc=如果你想保留 ROM 自带键盘
-archidroid.keyboard.none.desc=无键盘. 警告! 在完全擦除之后不要勾选! 第一次启动之前你需要至少一个第三方键盘!
+archidroid.keyboard=输入法
+archidroid.keyboard.google.desc=推荐强大顺滑的 Swype/Curve 输入法
+archidroid.keyboard.hackers.desc=如果用不到 swype/curve 的功能，TouchPal(触宝国际版) 是极好的替代选择
+archidroid.keyboard.both.desc=同时使用 TouchPal(触宝国际版) 和 Hacker输入法 (例如在终端中)
+archidroid.keyboard.stock.desc=如果你想保留 ROM 自带输入法
+archidroid.keyboard.none.desc=不安装输入法. 警告! 在完全擦除之后不要勾选! 第一次启动之前你需要至少一个第三方输入法!
 
 archidroid.bootanimation=开机动画
 archidroid.bootanimation.archi.desc=全新花哨 ArchiDroid 开机动画
