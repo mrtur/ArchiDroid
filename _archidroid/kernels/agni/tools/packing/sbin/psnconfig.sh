@@ -14,15 +14,11 @@ echo 0 >  /sys/devices/system/cpu/sched_mc_power_savings
 #### MISC settings
 echo "0" > /sys/class/misc/touchboost_switch/touchboost_switch
 echo "0" > /sys/class/misc/touchwake/enabled
+echo 0 > /sys/kernel/dyn_fsync/Dyn_fsync_earlysuspend
+echo 0 > /sys/kernel/dyn_fsync/Dyn_fsync_active
 
 # setting up swappiness
 echo 30 > /proc/sys/vm/swappiness
-
-# Optimize mounts
-#mount -o remount,noatime,nodiratime,nodev,nosuid /system
-#mount -o remount,noatime,nodiratime,nodev,nosuid /data
-#mount -o remount,noatime,nodiratime,nodev,nosuid /cache
-#mount -o remount,noatime,nodiratime,nodev,nosuid /preload
 
 # MDNIE Hijack
 echo 0 > /sys/class/mdnie/mdnie/hijack

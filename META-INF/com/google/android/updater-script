@@ -1,11 +1,24 @@
-###############################################################
-#     _                _      _  ____               _      _  #
-#    / \    _ __  ___ | |__  (_)|  _ \  _ __  ___  (_)  __| | #
-#   / _ \  | '__|/ __|| '_ \ | || | | || '__|/ _ \ | | / _` | #
-#  / ___ \ | |  | (__ | | | || || |_| || |  | (_) || || (_| | #
-# /_/   \_\|_|   \___||_| |_||_||____/ |_|   \___/ |_| \__,_| #
-#                                                             #
-###############################################################
+#     _             _     _ ____            _     _
+#    / \   _ __ ___| |__ (_)  _ \ _ __ ___ (_) __| |
+#   / _ \ | '__/ __| '_ \| | | | | '__/ _ \| |/ _` |
+#  / ___ \| | | (__| | | | | |_| | | | (_) | | (_| |
+# /_/   \_\_|  \___|_| |_|_|____/|_|  \___/|_|\__,_|
+#
+# Copyright 2014 Łukasz "JustArchi" Domeradzki
+# Contact: JustArchi@JustArchi.net
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 ui_print(">>> ArchiDroid is now loading...");
 #sleep (1);
 assert(getprop("ro.product.device") == "m0" || getprop("ro.build.product") == "m0" || 
@@ -33,7 +46,7 @@ endif;
 
 if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" then
 	### ARCHIDROID TOOLS ###
-	package_extract_file("_archidroid/scripts/adlock.sh", "/tmp/adlock.sh");
+	package_extract_file("_archidroid/exec/adlock.sh", "/tmp/adlock.sh");
 	set_perm(0, 0, 0777, "/tmp/adlock.sh");
 
 	set_progress(0.02);
@@ -59,7 +72,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 
 	if file_getprop("/tmp/aroma-data/archidroidwipe.prop","wipe") == "yes" then
 		ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Formatting /data excluding /data/media");
-		package_extract_file("_archidroid/scripts/wipe.sh", "/tmp/wipe.sh");
+		package_extract_file("_archidroid/exec/wipe.sh", "/tmp/wipe.sh");
 		set_perm(0, 0, 0777, "/tmp/wipe.sh");
 		run_program("/tmp/wipe.sh");
 		delete("/tmp/wipe.sh");
@@ -75,31 +88,23 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 	endif;
 
 	ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Executing Archi's Scripts");
-	package_extract_file("_archidroid/scripts/archidroid.sh", "/tmp/archidroid.sh");
+	package_extract_file("_archidroid/exec/archidroid.sh", "/tmp/archidroid.sh");
 	set_perm(0, 0, 0777, "/tmp/archidroid.sh");
-	run_program("/tmp/archidroid.sh");
-	delete("/tmp/archidroid.sh");
 
 	if file_getprop("/tmp/aroma-data/archidroidwipe.prop","wipe") == "yes" then
 		ui_print("<b><#ff0000>RunOnce</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>$</#></b> Install Mode Detected");
-		package_extract_file("_archidroid/scripts/archidroid_install.sh", "/tmp/archidroid_install.sh");
-		set_perm(0, 0, 0777, "/tmp/archidroid_install.sh");
-		run_program("/tmp/archidroid_install.sh");
-		delete("/tmp/archidroid_install.sh");
+		run_program("/tmp/archidroid.sh", "INSTALL");
 	else
 		if file_getprop("/tmp/aroma-data/archidroidwipe.prop","force") == "no" then
 			ui_print("<b><#ff0000>RunOnce</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>$</#></b> Update Mode Detected");
-			package_extract_file("_archidroid/scripts/archidroid_update.sh", "/tmp/archidroid_update.sh");
-			set_perm(0, 0, 0777, "/tmp/archidroid_update.sh");
-			run_program("/tmp/archidroid_update.sh");
+			run_program("/tmp/archidroid.sh", "UPDATE");
 		else
 			ui_print("<b><#ff0000>RunOnce</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>$</#></b> Forced Update Mode Detected");
-			package_extract_file("_archidroid/scripts/archidroid_update.sh", "/tmp/archidroid_update.sh");
-			set_perm(0, 0, 0777, "/tmp/archidroid_update.sh");
-			run_program("/tmp/archidroid_update.sh", "force");
+			run_program("/tmp/archidroid.sh", "UPDATE", "FORCE");
 		endif;
-		delete("/tmp/archidroid_update.sh");
 	endif;
+
+	delete("/tmp/archidroid.sh");
 
 	set_progress(0.1);
 
@@ -224,7 +229,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 	ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Flashing ArchiDroid Init Scripts");
 	### IMPORTANT ###
 	package_extract_dir("_archidroid/auto", "/");
-	package_extract_file("_archidroid/scripts/archidroid_backend.sh", "/tmp/archidroid_backend.sh");
+	package_extract_file("_archidroid/exec/archidroid_backend.sh", "/tmp/archidroid_backend.sh");
 	set_perm(0, 0, 0777, "/tmp/archidroid_backend.sh");
 	run_program("/tmp/archidroid_backend.sh");
 	delete("/tmp/archidroid_backend.sh");
@@ -281,7 +286,6 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 	set_metadata("/system/xbin/daemonsu", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:su_exec:s0");
 	set_metadata("/system/bin/.ext", "uid", 0, "gid", 2000, "mode", 0777, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 	set_metadata("/system/bin/.ext/.su", "uid", 0, "gid", 0, "mode", 06755, "capabilities", 0x0, "selabel", "u:object_r:su_exec:s0");
-	set_perm_recursive(0, 0, 0755, 0755, "/system/archidroid/scripts");
 
 	set_progress(0.54);
 
@@ -291,12 +295,6 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 	if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "barebones" then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Flashing Stock Kernel");
 			package_extract_file("boot.img", "/dev/block/mmcblk0p5");
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Applying 320 DPI");
-			package_extract_file("_archidroid/dpi/320dpi.sh", "/tmp/320dpi.sh");
-			set_perm(0, 0, 0777, "/tmp/320dpi.sh");
-			run_program("/tmp/320dpi.sh");
-			delete("tmp/320dpi.sh");
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Stock Keyboard");
 	else
 		##############
 		### KERNEL ###
@@ -423,32 +421,11 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		### DPI ###
 		###########
 
-		### 240 ###
-		if file_getprop("/tmp/aroma-data/archidroid.prop","dpi") == "240" then
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Applying 240 DPI");
-			package_extract_file("_archidroid/dpi/240dpi.sh", "/tmp/240dpi.sh");
-			set_perm(0, 0, 0777, "/tmp/240dpi.sh");
-			run_program("/tmp/240dpi.sh");
-			delete("tmp/240dpi.sh");
-		endif;
-
-		### 280 ###
-		if file_getprop("/tmp/aroma-data/archidroid.prop","dpi") == "280" then
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Applying 280 DPI");
-			package_extract_file("_archidroid/dpi/280dpi.sh", "/tmp/280dpi.sh");
-			set_perm(0, 0, 0777, "/tmp/280dpi.sh");
-			run_program("/tmp/280dpi.sh");
-			delete("tmp/280dpi.sh");
-		endif;
-
-		### 320 ###
-		if file_getprop("/tmp/aroma-data/archidroid.prop","dpi") == "320" then
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Applying 320 DPI");
-			package_extract_file("_archidroid/dpi/320dpi.sh", "/tmp/320dpi.sh");
-			set_perm(0, 0, 0777, "/tmp/320dpi.sh");
-			run_program("/tmp/320dpi.sh");
-			delete("tmp/320dpi.sh");
-		endif;
+		ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Applying ", file_getprop("/tmp/aroma-data/archidroid.prop","dpi"), " DPI");
+		package_extract_file("_archidroid/exec/dpi.sh", "/tmp/dpi.sh");
+		set_perm(0, 0, 0777, "/tmp/dpi.sh");
+		run_program("/tmp/dpi.sh", file_getprop("/tmp/aroma-data/archidroid.prop","dpi"));
+		delete("tmp/dpi.sh");
 
 		set_progress(0.64);
 
@@ -513,12 +490,12 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 		### KEYBOARD ###
 		################
 
-		### TOUCHPAL ###
-		if file_getprop("/tmp/aroma-data/archidroid.prop","keyboard") == "touchpal" then
+		### GOOGLE ###
+		if file_getprop("/tmp/aroma-data/archidroid.prop","keyboard") == "google" then
 			delete("/system/app/LatinIME.apk");
 			delete("/system/app/LatinIME.odex");
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing TouchPal Keyboard");
-			package_extract_dir("_archidroid/apps/touchpal", "/");
+			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Google Keyboard");
+			package_extract_dir("_archidroid/apps/google/keyboard", "/");
 		endif;
 
 		### HACKERS ###
@@ -531,10 +508,10 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 
 		### BOTH ###
 		if file_getprop("/tmp/aroma-data/archidroid.prop","keyboard") == "both" then
-			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing TouchPal + Hacker's Keyboard");
+			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Google + Hacker's Keyboard");
 			delete("/system/app/LatinIME.apk");
 			delete("/system/app/LatinIME.odex");
-			package_extract_dir("_archidroid/apps/touchpal", "/");
+			package_extract_dir("_archidroid/apps/google/keyboard", "/");
 			package_extract_dir("_archidroid/apps/hackers", "/");
 		endif;
 
@@ -572,7 +549,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Installing Google Launcher");
 			delete("/system/priv-app/Launcher3.apk");
 			delete("/system/priv-app/Launcher3.odex");
-			package_extract_dir("_archidroid/apps/googlelauncher", "/");
+			package_extract_dir("_archidroid/apps/google/launcher", "/");
 		endif;
 
 		### STOCK ###
@@ -608,6 +585,7 @@ if file_getprop("/tmp/aroma-data/archidroidrecovery.prop","recovery") == "none" 
 
 		if file_getprop("/tmp/aroma-data/archidroid.prop","bootanimation") == "logcat" then
 			ui_print("<b><#ff0000>root</#><#ecec36>@</#><#0cdfdf>ArchiDroid</#><#ecec36>:~</#><#c00cdf>#</#></b> Applying Logcat Bootanimation");
+			run_program("/sbin/busybox", "mv", "/system/bin/bootanimation", "/system/bin/bootanimation.backup");
 			package_extract_dir("_archidroid/bootanimations/logcat", "/");
 			set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
 			set_perm(0, 0, 06755, "/system/bin/boot-dmesg");
