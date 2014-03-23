@@ -46,8 +46,8 @@ ini_set("rom_date",             "XX-01-2014");
 #	1,
 
 	#-- Frame 1 [ Image, duration in millisecond ]. <AROMA Resource Dir>/splash/a[1..6].png
-#	"archidroidsplash", 2000,
-#	"archidroidsplash2", 2000
+#	"preview/bootanimation/archilegacy", 2000,
+#	"preview/bootanimation/archi", 2000
 #);
 
 #
@@ -257,10 +257,12 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"bootanimation","<#selectbg_g><~archidroid.bootanimation></#>","","group",
 #		"archi","ArchiDroid","<~archidroid.bootanimation.archi.desc>","select.selected",
 #		"archilegacy","ArchiDroid Legacy","<~archidroid.bootanimation.archilegacy.desc>","select",
-#		"archiminimalistic","ArchiDroid Minimalistic","Thanks to DroidShift79","select",
+		"archiminimalistic","ArchiDroid Minimalistic","Thanks to DroidShift79","select",
+		"archiminimalistic2","ArchiDroid Minimalistic V2","Thanks to DroidShift79","select",
 #		"logcat","Logcat","<~archidroid.bootanimation.logcat.desc>","select",
 		"stock","Stock","<~archidroid.bootanimation.stock.desc>","select",
 		"none","<~common.none>","<~archidroid.bootanimation.none.desc>","select",
+		"bootanimationpreview","Preview","<~archidroid.preview.desc>","check",
 
 		"other","<#selectbg_g><~archidroid.other></#>","","group",
 #		"archidroidota","ArchiDroid OTA","<~archidroid.ota.desc>","check.checked",
@@ -283,7 +285,12 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"buildtweaks","Add build.prop Tweaks","<~archidroid.tweaks.buildtweaks.desc>","check.checked",
 		"nocell","Remove Cell Broadcasts","<~archidroid.tweaks.nocell.desc>","check.checked"
 	);
-	write("/data/media/0/ArchiDroid/AromaPreset/OmniDroid/archidroid.prop",readtmpfile("archidroid.prop"));
+
+	if file_getprop("/tmp/aroma-data/archidroid.prop","bootanimationpreview") == "1" then
+		splash(4000,"preview/bootanimation/" + file_getprop("/tmp/aroma-data/archidroid.prop","bootanimation"));
+		back("1");
+	endif;
+	write("/data/media/0/ArchiDroid/AromaPreset/2.X/archidroid.prop",readtmpfile("archidroid.prop"));
 
 	### ArchiDroid Extra ###
 	if file_getprop("/tmp/aroma-data/archidroid.prop","kernel") == "boeffla" then
