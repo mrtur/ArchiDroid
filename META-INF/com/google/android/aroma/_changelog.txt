@@ -22,8 +22,9 @@ ArchiDroid 2.4
 
 - Improved internal ArchiDroid components used during flashing
 - Added 260 DPI and 300 DPI, thanks to above
+- Added 2 new ArchiDroid bootanimations, thanks to @DroidShift79
+- Added an option to preview themes and bootanimations directly in AROMA # I know you've been waiting for this! Includes only one screenshot per item (because of size) 
 - Replaced TouchPal keyboard with Google keyboard
-- Google Launcher is now selected in default preset
 - LMT is now enabled in default preset
 - Updated Boeffla kernel to 2.2-rc1
 - Updated AGNi kernel to 2.7.5
@@ -34,7 +35,7 @@ ArchiDroid 2.4
 - Updated Spirit 2 to 20-03
 - Updated LMT to 2.0
 - Updated BetterBatteryStats to 1.16.0.0 B3
-- Updated Xposed to 2.5-beta2
+- Updated Xposed to 2.5
 - Updated GravityBox to 3.0.0
-- Updated XPrivacy to 2.0.9
+- Updated XPrivacy to 2.0.11
 - Updated sources (Blacklist support under security, bunch of i9300 commits by @UtkarshGupta and much more)
