@@ -168,7 +168,6 @@ form(
 	"previous","<~archidroid.preset.previous>","<~archidroid.preset.previous.desc>","select.selected",
 	"barebones","<~archidroid.preset.barebones>","<~archidroid.preset.barebones.desc>","select"
 #	"recovery","Recovery","<~archidroid.preset.recovery.desc>","select"
-
 );
 
 ################
@@ -279,7 +278,6 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"buildtweaks","Add build.prop Tweaks","<~archidroid.tweaks.buildtweaks.desc>","check.checked",
 		"nocell","Remove Cell Broadcasts","<~archidroid.tweaks.nocell.desc>","check.checked"
 	);
-
 	if file_getprop("/tmp/aroma-data/archidroid.prop","bootanimationpreview") == "1" then
 		splash(4000,"preview/bootanimation/" + file_getprop("/tmp/aroma-data/archidroid.prop","bootanimation"));
 		back("1");
@@ -560,9 +558,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") != "recov
 	endif;
 endif;
 
-
 ini_set("text_next", "<~common.flash>");
-
 viewbox(
 	"<~archidroid.prepinstall>",
 	"<~archidroid.prepinstall.desc>",

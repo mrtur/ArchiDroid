@@ -56,8 +56,8 @@ if [ ! -e /dev/ARCHIDROID_BACKEND_ACTIVE ]; then
 	if [ ! -z "$(which ARCHIDROID_RUNONCE)" ]; then
 		ARCHIDROID_RUNONCE "background" &
 	else
-	ARCHIDROID_INIT "background" &
-fi
+		ARCHIDROID_INIT "background" &
+	fi
 fi
 
 if [ ! -e "$CHECKPART" ]; then
