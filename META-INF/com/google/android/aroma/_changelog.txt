@@ -1,2 +1,2 @@
-
+- Updated SuperSU to 1.94
 
