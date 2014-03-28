@@ -1,4 +1,7 @@
 ArchiDroid 2.4.1
 
-- [!] Reverted O2 for TARGET_THUMB, back to Os
-# This fixed half-bootlooping ART, mount.exfat and probably bunch of other issues (bluetooth?)
+- Updated Linaro toolchain to 14.03
+- Updated Boeffla kernel to 2.2
+- Updated AGNi kernel to 2.7.5 R3
+- Updated SuperSU to 1.94
+- Updated sources
