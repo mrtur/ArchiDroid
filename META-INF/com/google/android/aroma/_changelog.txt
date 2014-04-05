@@ -1,6 +1,6 @@
 ArchiDroid 2.4.1
 
-- Replaced modular PA GAPPS by minimalistic BaNkS GAPPS, reducing size to the minimum
+- [!] Google Apps (core) are now preinstalled by default (without aroma choice) # This is because of some dependencies i.e. with google keyboard, you can still override it with any pack you want. Also they're not being installed in barebones preset
 - Updated Linaro toolchain to 14.03
 - Updated Boeffla kernel to 2.2
 - Updated AGNi kernel to 2.7.5 R3
