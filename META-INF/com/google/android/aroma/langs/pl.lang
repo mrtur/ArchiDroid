@@ -111,14 +111,16 @@ archidroid.custom=Dostosowywanie ArchiDroid
 archidroid.custom.extra=Dostosywywanie Ekstra ArchiDroid
 archidroid.custom.desc=Zmodyfikuj proszę poniższe ustawienia do Twoich predyspozycji:
 
-archidroid.kernel.temasek.desc=Wysoce zalecany dla najlepszej wydajności, elastyczności, oszczędności baterii i jakości audio
 archidroid.kernel.boeffla.desc=Wysoce zalecane arcydzieło dla każdego, wyróżniające się silnikiem boeffla oraz wieloma innymi usprawnieniami
 archidroid.kernel.yank.desc=Zalecany jako alternatywa
 archidroid.kernel.googy.desc=Bazowany na źródłach Siyah. Posiada dual-boot, zawiera STweaks
 archidroid.kernel.devil.desc=Bazowany na źródłach Perseus. Posiada dual-boot, zawiera DevilTools
-archidroid.kernel.stock.desc=Pochodzący prosto z ROM
+archidroid.kernel.agni.desc=Bardzo wyrafinowany kernel, zawierający m.in wsparcie F2FS
+archidroid.kernel.stock.desc=Pochodzący prosto z ROMu
 
 archidroid.theme.aosp.desc=Motyw AOSP
+archidroid.theme.black.desc=Czarny motyw
+archidroid.theme.blue.desc=Niebieski motyw
 archidroid.theme.stock.desc=Stockowy motyw
 
 archidroid.dpi.240w.desc=UWAGA! Możliwe niewielkie bugi graficzne
@@ -128,6 +130,7 @@ archidroid.dpi.320.desc=Wartość domyślna
 
 archidroid.launcher.nova.desc=Zalecany dla o wiele większej wydajności i elastyczności
 archidroid.launcher.google.desc=Zalecany dla google experience w czystej postaci, znany również pod nazwą Google Home
+archidroid.launcher.stock.desc=Pochodzący z samego ROMu
 archidroid.launcher.none.desc=Brak Launchera. UWAGA! Nie zaznaczaj tej opcji jeśli wykonałeś full wipe. Potrzebujesz przynajmniej 1 własnego launchera przed pierwszym bootem!
 
 archidroid.keyboard=Klawiatura
@@ -167,9 +170,10 @@ archidroid.apps.adobeflash.desc=Zapewnia wsparcie dla technologii flash. Nie dzi
 
 archidroid.tweaks.buildtweaks.desc=Wiele tweaków build.prop, w tym m.in. głębszy sen oraz większa wydajność
 archidroid.tweaks.nocell.desc=Generalnie uważane za bloatware. Odznacz jeśli chcesz je zachować
+archidroid.tweaks.camerafix.desc=Napraw błąd kamery, użyj tej opcji wyłącznie w razie problemów z kamerą po flashowaniu!
 
-archidroid.preset.no=No Preset
-archidroid.preset.no.desc=Not recommended because you'll miss most of the Archi's optimizations
+archidroid.preset.no=Brak Presetu
+archidroid.preset.no.desc=Niezalecane z powodu utraty wszystkich optymalizacji ArchiDroid
 
 archidroid.preset.kernel.boeffla.archiperformance=ArchiDroid Performance
 archidroid.preset.kernel.boeffla.archiperformance.desc=Preset przeznaczony głównie dla graczy, zawierający overclock CPU i GPU. Spodziewaj się lepszej wydajności kosztem życia baterii
@@ -178,12 +182,9 @@ archidroid.preset.kernel.boeffla.archipowersave.desc=Domyślny preset proponowan
 archidroid.preset.kernel.boeffla.archiultrapowersave=ArchiDroid UltraPowerSave
 archidroid.preset.kernel.boeffla.archiultrapowersave.desc=Preset przeznaczony i zoptymalizowany pod kątem maksymalnego czasu życia baterii. Spodziewaj się dłuższego życia baterii kosztem zmniejszonej wydajności
 
-archidroid.boeffla.yesarchi=Tak, z Presetem Archi's Audiophile
-archidroid.boeffla.yesarchi.desc=Wysoce zalecane. Poprawia jakość dźwięku poprzez ustawienia Boeffla SC wg. gustu Archiego
-archidroid.boeffla.yes.desc=Jeśli zamierzasz stworzyć swój własny preset po instalacji
-archidroid.boeffla.no.desc=Jeśli nie chcesz instalować Boeffla SC
 
 archidroid.xposed.appsettings.desc=Pozwala na zarządzanie ustawieniami specyficznymi dla danych aplikacji. Bardzo użyteczny moduł
+archidroid.xposed.gravitybox.desc=Bardzo zaawansowane i obfite w funkcje narzędzie umożliwiające dostosowanie każdej części ROMu
 archidroid.xposed.xprivacy.desc=Perfekcyjne narzędzie oferujące kontrolę aplikacji i ich uprawnień oraz wiele innych funkcji związanych z bezpieczeństwem
 archidroid.xposed.wanam.desc=Arcydzieło od Wanama. Zwiększa elastyczność ArchiDroida oraz dostarcza mnóstwo opcji w zakresie ustawień ROMu
 
