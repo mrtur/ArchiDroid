@@ -154,8 +154,6 @@ archidroid.updatemodem.desc=如果你想用最新基带的话
 archidroid.updaterecovery=更新 Recovery
 archidroid.updaterecovery.desc=如果你想使用最新recovery
 
-archidroid.gapps.desc=Google核心服务包和APP. 不要取消勾选这个！
-archidroid.gapps.gquick.desc=可能破坏掉 Google Voice!
 
 archidroid.apps.vnc.desc=A VNC client, which allows you to use GUI in ArchiDroid's Pocket Debian
 archidroid.apps.titaniumbackup.desc=刷机/更新保存个人数据和app的最佳方案

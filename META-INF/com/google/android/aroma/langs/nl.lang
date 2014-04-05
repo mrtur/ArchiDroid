@@ -154,8 +154,6 @@ archidroid.updatemodem.desc=Voor als je de laatste Modem wil hebben.
 archidroid.updaterecovery=Update Recovery
 archidroid.updaterecovery.desc=Voor als je de laatste recovery wilt hebben.
 
-archidroid.gapps.desc=Kern functionaliteit van Google apps. NIET DESELECTEREN.
-archidroid.gapps.gquick.desc=Kan Google Voice stuk maken!
 
 archidroid.apps.vnc.desc=A VNC client, which allows you to use GUI in ArchiDroid's Pocket Debian
 archidroid.apps.titaniumbackup.desc=Perfecte oplossing voor het bewaren van persoonlijke/app data tussen updates
