@@ -27,7 +27,7 @@ setvar("preset_version","9");
 
 ini_set("dp","3");
 ini_set("rom_name",             "ArchiDroid");
-ini_set("rom_version",          "2.4.1");
+ini_set("rom_version",          "2.4.2");
 ini_set("rom_author",           "JustArchi");
 ini_set("rom_device",           "Samsung Galaxy S3");
 ini_set("rom_date",             "April XXth, 2014");
@@ -265,7 +265,6 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"updatemodem","<~archidroid.updatemodem> [XXUGNA8]","<~archidroid.updatemodem.desc>","check",
 
 		"archiapps","<#selectbg_g>ArchiDroid Apps</#>","","group",
-		"gapps","Google Apps","<~archidroid.gapps.desc>","check.checked",
 		"vnc","VNC Viewer","<~archidroid.apps.vnc.desc>","check",
 		"titaniumbackup","Titanium Backup","<~archidroid.apps.titaniumbackup.desc>","check.checked",
 		"greenify","Greenify","<~archidroid.apps.greenify.desc>","check.checked",
