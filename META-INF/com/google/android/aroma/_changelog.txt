@@ -1,4 +1,4 @@
 ArchiDroid 2.4.1
 
-- Added runtime selection (art/dalvik) to AROMA
+- Updated AdAway and MOAB adblocking rules to latest versions
 
