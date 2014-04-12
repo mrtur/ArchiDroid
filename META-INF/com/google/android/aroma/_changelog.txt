@@ -2,4 +2,4 @@ ArchiDroid 2.4.1
 
 - Updated AdAway and MOAB adblocking rules to latest versions
 - Updated Xposed to 2.5.1
-
+- Updated XPrivacy to 2.0.15
