@@ -1,7 +1,4 @@
 ArchiDroid 2.4.1
 
-- Updated AdAway and MOAB adblocking rules to latest versions
-- Updated PA GAPPS to 0412
-- Updated Google Keyboard to 3.0.19423
-- Updated Xposed to 2.5.1
-- Updated XPrivacy to 2.0.16
+- Updated ArchiDroid Backend tools (dnsmasq, haveged, dnsproxy2) to latest versions
+
