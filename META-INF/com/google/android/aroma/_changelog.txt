@@ -1,3 +1,4 @@
 ArchiDroid 2.4.1
 
-More backend updates
+- More backend updates
+- Updated App Settings to 1.8
