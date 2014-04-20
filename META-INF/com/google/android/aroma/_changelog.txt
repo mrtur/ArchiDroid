@@ -1,4 +1,5 @@
-ArchiDroid 2.4.1
+ArchiDroid 2.4.3
 
 - More backend updates
 - Updated App Settings to 1.8
+- Updated GravityBox to 3.0.3
