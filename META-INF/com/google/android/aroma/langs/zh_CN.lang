@@ -154,8 +154,6 @@ archidroid.updatemodem.desc=如果你想用最新基带的话
 archidroid.updaterecovery=更新 Recovery
 archidroid.updaterecovery.desc=如果你想使用最新recovery
 
-
-archidroid.apps.vnc.desc=A VNC client, which allows you to use GUI in ArchiDroid's Pocket Debian
 archidroid.apps.titaniumbackup.desc=刷机/更新保存个人数据和app的最佳方案
 archidroid.apps.greenify.desc=休眠任何app的利器, 能增强电池续航
 archidroid.apps.lmt.desc=执行绑定到特定屏幕手势的命令的工具, 在SlimBean也被称为 pie
