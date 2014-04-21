@@ -30,7 +30,7 @@ ini_set("rom_name",             "ArchiDroid");
 ini_set("rom_version",          "2.4.3");
 ini_set("rom_author",           "JustArchi");
 ini_set("rom_device",           "Samsung Galaxy S3");
-ini_set("rom_date",             "April XXth, 2014");
+ini_set("rom_date",             "April 20th, 2014");
 
 ##
 # Show Animated Splash
@@ -265,7 +265,6 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"updatemodem","<~archidroid.updatemodem> [XXUGNA8]","<~archidroid.updatemodem.desc>","check",
 
 		"archiapps","<#selectbg_g>ArchiDroid Apps</#>","","group",
-		"vnc","VNC Viewer","<~archidroid.apps.vnc.desc>","check",
 		"titaniumbackup","Titanium Backup","<~archidroid.apps.titaniumbackup.desc>","check.checked",
 		"greenify","Greenify","<~archidroid.apps.greenify.desc>","check.checked",
 		"lmt","LMT","<~archidroid.apps.lmt.desc>","check.checked",
