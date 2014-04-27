@@ -6,3 +6,4 @@ ArchiDroid 2.4.3
 - Updated App Settings to 1.8
 - Updated XPrivacy to 2.0.19
 - Updated GravityBox to 3.0.3
+- [!] Code revision, big cleanup and optimizations in ArchiDroid scripts and tools
