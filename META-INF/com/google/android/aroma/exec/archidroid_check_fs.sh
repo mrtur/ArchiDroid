@@ -37,7 +37,6 @@ radio="/dev/block/mmcblk0p1" # Modem image, used by eval in stages 2+, SC2034
 cache="/dev/block/mmcblk0p22" # Cache partition, used by eval in stages 2+, SC2034
 system="/dev/block/mmcblk0p21" # # System partition, used by eval in stages 2+, SC2034
 data="/dev/block/mmcblk0p23" # Data and internal memory, used by eval in stages 2+, SC2034
-AUTO="/system /cache /data" # Filesystems which should be unmounted automatically when no argument is given, typically every partition excluding images
 
 GOTBUSYBOX="false"
 GOTMOUNT="false"
