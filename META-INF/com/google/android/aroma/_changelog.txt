@@ -4,3 +4,4 @@ ArchiDroid 2.4.5
 - Fixed adflash not showing changelog properly, thanks to @oaid
 - Updated PA GAPPS to 13 May
 - Updated Xposed to 2.6 beta1
+- Updated App Settings to 1.9
