@@ -3,8 +3,8 @@ ArchiDroid 2.4.5
 - Added "Previous Preset Expert" to AROMA. This allows you to load previous preset and customize it, even if it doesn't pass integrity check
 - Code review of adflash utility, POSIX-standard fixes, misc improvements and cleanup
 - Fixed adflash not showing changelog properly, thanks to @oaid
-- Updated PA GAPPS to 13 May
 - Updated Xposed to 2.6 beta1
+- Updated PA GAPPS to 17 May
 - Updated Titanium Backup to 6.1.5.6
 - Updated Greenify to 2.3
 - Updated App Settings to 1.9
