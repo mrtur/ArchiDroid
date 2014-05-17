@@ -1,2 +1,1 @@
-
-
+- Updated ArchiDroid's Pocket Debian to 17 May (you will need to use adlinux rebuild)
