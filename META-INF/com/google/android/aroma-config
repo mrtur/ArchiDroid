@@ -170,8 +170,8 @@ form(
 
 	"preset","<#selectbg_g><~archidroid.preset.group></#>","","group",
 	"custom","<~archidroid.preset.custom>", "<~archidroid.preset.custom.desc>","select",
-	"previousexpert","<~archidroid.preset.previousexpert>","<~archidroid.preset.previousexpert.desc>","select",
 	"previous","<~archidroid.preset.previous>","<~archidroid.preset.previous.desc>","select.selected",
+	"previousexpert","<~archidroid.preset.previous> Expert","<~archidroid.preset.previousexpert.desc>","select",
 	"barebones","<~archidroid.preset.barebones>","<~archidroid.preset.barebones.desc>","select",
 	"recovery","Recovery","<~archidroid.preset.recovery.desc>","select"
 );
@@ -204,7 +204,7 @@ endif;
 
 if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "previous" then
 	setvar("preset_version_probe",read(getvar("adaroma")+"/version.txt"));
-	if getvar("preset_version")!=getvar("preset_version_probe") then
+	if getvar("preset_version_probe")!=getvar("preset_version") then
 		alert("ArchiDroid Wizard","<~archidroid.detect.previouspreset.fail>","@alert");
 		writetmpfile("archidroidinstallmode.prop","preset=custom\n");
 	else
@@ -216,12 +216,14 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "previ
 endif;
 
 if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "previousexpert" then
-	# TODO: Aroma hangs when no files are present, add exception for this later
+	setvar("preset_version_probe",read(getvar("adaroma")+"/version.txt"));
 	writetmpfile("archidroidinstallmode.prop","preset=custom\n");
-	writetmpfile("archidroid.prop",read(getvar("adaroma")+"/archidroid.prop"));
-	writetmpfile("archidroidboeffla.prop",read(getvar("adaroma")+"/archidroidboeffla.prop"));
-	writetmpfile("archidroidxposed.prop",read(getvar("adaroma")+"/archidroidxposed.prop"));
-	writetmpfile("archidroidbuild.prop",read(getvar("adaroma")+"/archidroidbuild.prop"));
+	if getvar("preset_version_probe")!="" then
+		writetmpfile("archidroid.prop",read(getvar("adaroma")+"/archidroid.prop"));
+		writetmpfile("archidroidboeffla.prop",read(getvar("adaroma")+"/archidroidboeffla.prop"));
+		writetmpfile("archidroidxposed.prop",read(getvar("adaroma")+"/archidroidxposed.prop"));
+		writetmpfile("archidroidbuild.prop",read(getvar("adaroma")+"/archidroidbuild.prop"));
+	endif;
 endif;
 
 ###############################
@@ -238,7 +240,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"kernel","<#selectbg_g>Kernel</#>","","group",
 		"boeffla","Boeffla","<~archidroid.kernel.boeffla.desc>","select.selected",
 		"yank","Yank555.lu","<~archidroid.kernel.yank.desc>","select",
-		"googy","Googy Max","<~archidroid.kernel.googy.desc>","select",
+		"googy","Googy Max [EOL]","<~archidroid.kernel.googy.desc>","select",
 		"devil","Devil","<~archidroid.kernel.devil.desc>","select",
 		"agni","AGNi","<~archidroid.kernel.agni.desc>","select",
 		"stock","Stock","<~archidroid.kernel.stock.desc>","select",
@@ -528,24 +530,24 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"cache","<#selectbg_g>Cache</#>","","group",
 		"0","0 Megabytes","<~archidroid.hardswap.remove.desc>","select",
 		"64","64 Megabytes","","select",
-		"128","128 Megabytes","","select",
-		"256","256 Megabytes","<~archidroid.hardswap.size.default.desc>","select",
+		"128","128 Megabytes","<~archidroid.hardswap.size.default.desc>","select",
+		"256","256 Megabytes","","select",
 		"512","512 Megabytes","","select",
 		"current","Current: "+getvar("hardswapcache"),"","select.selected",
 
 		"preload","<#selectbg_g>Preload</#>","","group",
 		"0","0 Megabytes","<~archidroid.hardswap.remove.desc>","select",
 		"64","64 Megabytes","","select",
-		"128","128 Megabytes","","select",
-		"256","256 Megabytes","<~archidroid.hardswap.size.default.desc>","select",
+		"128","128 Megabytes","<~archidroid.hardswap.size.default.desc>","select",
+		"256","256 Megabytes","","select",
 		"512","512 Megabytes","","select",
 		"current","Current: "+getvar("hardswappreload"),"","select.selected",
 
 		"sdcard1","<#selectbg_g>External SD Card</#>","","group",
 		"0","0 Megabytes","<~archidroid.hardswap.remove.desc>","select",
 		"64","64 Megabytes","","select",
-		"128","128 Megabytes","","select",
-		"256","256 Megabytes","<~archidroid.hardswap.size.default.desc>","select",
+		"128","128 Megabytes","<~archidroid.hardswap.size.default.desc>","select",
+		"256","256 Megabytes","","select",
 		"512","512 Megabytes","","select",
 		"current","Current: "+getvar("hardswapsdcard"),"","select.selected"
 	);
@@ -553,17 +555,17 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 	if file_getprop("/tmp/aroma-data/archidroidhardswap.prop","cache") != "current" then
 		pleasewait("Applying Hardswap...");
 		resexec("exec/archidroid_hardswap.sh", "/cache", file_getprop("/tmp/aroma-data/archidroidhardswap.prop","cache"));
-		textbox("ArchiDroid Partition Wizard", "<~archidroid.hardswap.finish.desc>", "@default", getvar("exec_buffer"));
+		textbox("ArchiDroid Partition Wizard", "", "@default", getvar("exec_buffer"));
 	endif;
 	if file_getprop("/tmp/aroma-data/archidroidhardswap.prop","preload") != "current" then
 		pleasewait("Applying Hardswap...");
 		resexec("exec/archidroid_hardswap.sh", "/preload", file_getprop("/tmp/aroma-data/archidroidhardswap.prop","preload"));
-		textbox("ArchiDroid Partition Wizard", "<~archidroid.hardswap.finish.desc>", "@default", getvar("exec_buffer"));
+		textbox("ArchiDroid Partition Wizard", "", "@default", getvar("exec_buffer"));
 	endif;
 	if file_getprop("/tmp/aroma-data/archidroidhardswap.prop","sdcard1") != "current" then
 		pleasewait("Applying Hardswap...");
 		resexec("exec/archidroid_hardswap.sh", "/storage/sdcard1", file_getprop("/tmp/aroma-data/archidroidhardswap.prop","sdcard1"));
-		textbox("ArchiDroid Partition Wizard", "<~archidroid.hardswap.finish.desc>", "@default", getvar("exec_buffer"));
+		textbox("ArchiDroid Partition Wizard", "", "@default", getvar("exec_buffer"));
 	endif;
 endif;
 
