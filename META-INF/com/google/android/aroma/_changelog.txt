@@ -6,12 +6,14 @@ ArchiDroid 2.4.5
 * Created a canonical counter for number of iterations in loops for which determining number of iterations requires complicated analysis. Later optimizations then may determine the number easily (-ftree-loop-ivcanon)
 * Performed induction variable optimizations (strength reduction, induction variable merging and induction variable elimination) on trees (-fivopts)
 * Tried to reduce the number of symbolic address calculations by using shared “anchor” symbols to address nearby objects. This transformation can help to reduce the number of GOT entries and GOT accesses on some targets (-fsection-anchors)
+* Assumed that loop indices do not overflow, and that loops with nontrivial exit condition are not infinite. This enables a wider range of loop optimizations even if the loop optimizer itself cannot prove that these assumptions are valid (-funsafe-loop-optimizations)
 
 - Code review of adflash utility, POSIX-standard fixes, misc improvements and cleanup
 - Fixed adflash not showing changelog properly, thanks to @oaid
-- Updated Linaro toolchain to daily snapshot from 9 May
+- Updated Linaro toolchain to daily snapshot from 16 May
 - Updated PA GAPPS to 13 May
-- Updated Boeffla kernel to 2.3-beta2
+- Updated Boeffla kernel to 2.3-beta3
+- Updated Boeffla presets
 - Updated AGNi kernel to 2.7.8
 - Updated Xposed to 2.6 beta1
 - Updated App Settings to 1.9
