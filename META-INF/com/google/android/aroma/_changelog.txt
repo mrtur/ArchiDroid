@@ -1,0 +1,5 @@
+ArchiDroid 2.4.6
+
+- Updated SuperSU to 1.97
+
+
