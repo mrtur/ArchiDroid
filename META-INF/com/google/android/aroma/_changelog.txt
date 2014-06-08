@@ -6,7 +6,7 @@ ArchiDroid 2.4.6
 - Updated Google Playstore to 4.8.19
 - Updated Xposed to 2.6.1
 - Updated GravityBox to 3.1.5
-- Updated XPrivacy to 2.0.28
+- Updated XPrivacy to 2.0.30
 - Updated PA GAPPS 03 June
 - Updated Nova Launcher to 3.0.1
 - Updated MX Player to 1.7.27
