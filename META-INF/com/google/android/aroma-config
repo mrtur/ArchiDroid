@@ -28,10 +28,10 @@ setvar("adaroma","/data/media/0/ArchiDroid/AromaPreset/2.X");
 
 ini_set("dp","3");
 ini_set("rom_name",             "ArchiDroid");
-ini_set("rom_version",          "2.4.6");
+ini_set("rom_version",          "2.4.7");
 ini_set("rom_author",           "JustArchi");
 ini_set("rom_device",           "Samsung Galaxy S3");
-ini_set("rom_date",             "June 8th, 2014");
+ini_set("rom_date",             "June XXth, 2014");
 
 ##
 # Show Animated Splash
@@ -238,6 +238,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"archidroid.prop",
 
 		"kernel","<#selectbg_g>Kernel</#>","","group",
+		"archi","ArchiKernel","ALPHA","select",
 		"boeffla","Boeffla","<~archidroid.kernel.boeffla.desc>","select.selected",
 		"yank","Yank555.lu","<~archidroid.kernel.yank.desc>","select",
 		"googy","Googy Max [EOL]","<~archidroid.kernel.googy.desc>","select",
