@@ -1,4 +1,101 @@
 ===================================
+Since Sat Jun 21 11:18:28 UTC 2014
+===================================
+
+   * frameworks/base
+648c3a5 Merge "InputDevices: ES translations (AOSP)" into cm-11.0
+f40df0f Merge "base: don't show global actions if shutdown sequence was started" into cm-11.0
+79dd619 Merge "base: properly check that quickboot is enabled" into cm-11.0
+6551a47 HeadsUp: Clean up.
+2118332 Automatic translation import
+392e171 Merge "Themes: Theme immersive mode cling." into cm-11.0
+872a2ee Merge "QS: New torch icon" into cm-11.0
+
+   * packages/apps/Apollo
+4612f2b Automatic translation import
+
+   * packages/apps/BluetoothExt
+ce3dfdf Automatic translation import
+
+   * packages/apps/Browser
+ad54e32 Automatic translation import
+
+   * packages/apps/CMAccount
+d90c21c Automatic translation import
+
+   * packages/apps/CMUpdater
+6047b4b Automatic translation import
+
+   * packages/apps/CMWallpapers
+965d641 Automatic translation import
+
+   * packages/apps/Calculator
+4588c5c Automatic translation import
+
+   * packages/apps/Calendar
+690cbf7 Automatic translation import
+
+   * packages/apps/Camera2
+e2142a4 Automatic translation import
+
+   * packages/apps/Contacts
+01abff5 Automatic translation import
+
+   * packages/apps/ContactsCommon
+96a41ee Automatic translation import
+
+   * packages/apps/DSPManager
+40d14d5 Automatic translation import
+
+   * packages/apps/DeskClock
+dc67268 Automatic translation import
+
+   * packages/apps/Dialer
+4b18125 Automatic translation import
+
+   * packages/apps/Email
+5f0ea8a Automatic translation import
+
+   * packages/apps/InCallUI
+643fb7e Automatic translation import
+
+   * packages/apps/LockClock
+41d1d40 Automatic translation import
+
+   * packages/apps/Mms
+b475f5c Automatic translation import
+
+   * packages/apps/Settings
+7e2e007 Automatic translation import
+
+   * packages/apps/ThemeChooser
+ba08eab Automatic translation import
+
+   * packages/apps/Torch
+5cc14f4 Automatic translation import
+
+   * packages/apps/Trebuchet
+07856ff Automatic translation import
+
+   * packages/apps/VoicePlus
+24e0fb1 Automatic translation import
+
+   * packages/inputmethods/LatinIME
+46fde59 Automatic translation import
+
+   * packages/providers/DownloadProvider
+a93c720 Automatic translation import
+
+   * packages/services/Telephony
+134f8a9 Automatic translation import
+
+   * packages/wallpapers/PhaseBeam
+b1b8fe8 Automatic translation import
+
+   * packages/wallpapers/PhotoPhase
+7dc62e4 photophase: cleanup GL resources in GLThread
+
+===================================
 Since Fri Jun 20 11:20:34 UTC 2014
 ===================================
 
@@ -13,6 +110,7 @@ af3f6ff stat: fix printing selinux context and null-dereference
 5c8a770 PackageManager: Fix logic around upgrading text display
 39e5298 Fix PackageManagerService WTF in systemReady()
 a18b881 WallpaperCropper: include wallpapers from themes!
+4317e1c Themes: Theme immersive mode cling.
 
    * packages/apps/CMFileManager
 9203573 CMFileManager: Update strings
@@ -34,6 +132,11 @@ b85d13b Merge "Hardcode 'Get More' entries" into cm-11.0
 130110f Fix CustomContent/CMHome bugs with settings.
 
    * packages/wallpapers/PhotoPhase
+2a4eb73 photophase: update strings
+7536296 photophase: restrict max value for background dim
+3d8fa0f photophase: remove unnecessary flag
+6c3650b photophase: force world redraw before put GLView in sleep mode
+4319497 photophase: remove unnecessary calls
 6decf92 Update strings
 
 ===================================
@@ -58,6 +161,9 @@ d9324e9 Merge tag 'android-4.4.4_r1' into HEAD
    * frameworks/base
 8f4f7bb Fix alignment of small tiles
 a5ff4ed Merge tag 'android-4.4.4_r1' into HEAD
+8bbc34f base: properly check that quickboot is enabled
+9023469 base: don't show global actions if shutdown sequence was started
+030d43f QS: New torch icon
 
    * frameworks/webview
 b3af9e0 Merge tag 'android-4.4.4_r1' into HEAD
@@ -179,65 +285,4 @@ b13a6de Cherry-pick "Export WebCore::forgetV8ObjectForNPObject"
 
    * external/chromium_org/third_party/openssl
 e2f305e Cherrypick "OpenSSL: add CVE fixes from 1.0.1h"
-
-===================================
-Since Sun Jun 15 11:10:13 UTC 2014
-===================================
-
-   * android
-81ee22d manifest: Add PhotoPhase repo
-05a0007 Add CMHome application.
-
-   * bootable/recovery
-15b499b Progress thread: less aggressive redraw
-
-   * external/whispersystems/WhisperPush
-f6ab030 WhisperPush: Don't query active session if token is null.
-
-   * frameworks/base
-4178a95 Fix icon support for secondary users.
-5fed217 Merge "Updating ActivityIntentResolver so that queryIntents doesn't return protected applications." into cm-11.0
-2d01de7 SystemUI: Update UserTile from Google 4.4 code
-cebde37 Merge "Themes: Set bounds on iconUpon" into cm-11.0
-6e783ad Updating ActivityIntentResolver so that queryIntents doesn't return protected applications.
-0ce4d00 Keyguard: Distinguish the TextView id of pinEntry
-44ad279 PackageManagerService: Prevent sending a SIGKILL while the device shutting down
-d3207b3 tests: Hide new private APIs
-2734a07 Themes: Set bounds on iconUpon
-4d80714 Merge "Themes: Get resources with an explicit theme attached." into cm-11.0
-
-   * hardware/qcom/audio-caf
-9dbe39e audio: Force route on HAL when USB headset is disconnected
-
-   * packages/apps/Apollo
-715bd79 Apollo: Allow reading external storage
-
-   * packages/apps/CMHome
-ca6582c Change the background header to a different image.
-0edac1b Removed search capability from this application for now, so that Google search can be used instead by default. Added a proguard flag to include the com.android.launcher.home.Home interface from the api generated jar.
-
-   * packages/apps/CMUpdater
-408d883 CMUpdater: update channels to reflect release structure
-
-   * packages/apps/Calculator
-b3fceae Drop remnants of broken local locales
-
-   * packages/apps/Settings
-c33aa1b Integrate quite hours active period strings for JA translation
-c236fcd Settings: Modify & add AOSP JA translation
-
-   * packages/apps/ThemeChooser
-d45bad2 Add 'Get More' Menu option
-
-   * packages/apps/Trebuchet
-7b28680 Replace ugly Drawer setting (Sort Mode)
-0268e23 Trebuchet : Persist sorting mode
-5b2ed54 Trebuchet: don't crash when updating the "All apps" shortcut
-
-   * packages/wallpapers/PhotoPhase
-a017274 photophase: fix proguard flags
-
-   * vendor/cm
-5d7d0e5 Reverting last commit, pushed to head by accident.
-ee55f65 Add the CMHome application to the common_full makefile.
 
