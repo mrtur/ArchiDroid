@@ -1,6 +1,36 @@
 ===================================
+Since Sun Jun 22 11:22:23 UTC 2014
+===================================
+
+   * frameworks/base
+a1508a0 Merge "Theme IME switcher alert dialog" into cm-11.0
+6dcf7ec Merge "accounts: don't remove accounts while device is in safe mode" into cm-11.0
+51f1bd0 Automatic translation import
+04b8e28 Theme IME switcher alert dialog
+be9c179 Themes: Use INSTALL_LOCATION_INTERNAL_ONLY for legacy icon packs
+55f1764 Show notification on adb over network too
+
+   * packages/apps/Contacts
+0af4489 Merge "quickcontact: fallback to default secondary action drawable" into cm-11.0
+01665d0 quickcontact: fallback to default secondary action drawable
+
+   * packages/apps/Mms
+c40181a Automatic translation import
+adf36b9 Merge "Mms: use Holo Light theme" into cm-11.0
+
+   * packages/providers/ThemesProvider
+66f586f Automatic translation import
+0ce8beb Reapply theme components when theme updated.
+
+===================================
 Since Sat Jun 21 11:18:28 UTC 2014
 ===================================
+
+   * external/koush/Superuser
+9f50ee9 Automatic translation import
+
+   * external/whispersystems/WhisperPush
+414bcfa Automatic translation import
 
    * frameworks/base
 648c3a5 Merge "InputDevices: ES translations (AOSP)" into cm-11.0
@@ -14,10 +44,14 @@ f40df0f Merge "base: don't show global actions if shutdown sequence was started"
    * packages/apps/Apollo
 4612f2b Automatic translation import
 
+   * packages/apps/BasicSmsReceiver
+c9d2789 Automatic translation import
+
    * packages/apps/BluetoothExt
 ce3dfdf Automatic translation import
 
    * packages/apps/Browser
+6c5fabf Automatic translation import
 ad54e32 Automatic translation import
 
    * packages/apps/CMAccount
@@ -30,34 +64,61 @@ d90c21c Automatic translation import
 965d641 Automatic translation import
 
    * packages/apps/Calculator
+383611b Automatic translation import
 4588c5c Automatic translation import
 
    * packages/apps/Calendar
+61eca87 Automatic translation import
 690cbf7 Automatic translation import
 
    * packages/apps/Camera2
+bfcf87e Automatic translation import
 e2142a4 Automatic translation import
 
+   * packages/apps/CellBroadcastReceiver
+6f8526e Automatic translation import
+
+   * packages/apps/CertInstaller
+157df10 Automatic translation import
+
    * packages/apps/Contacts
+cb871ad Automatic translation import
 01abff5 Automatic translation import
 
    * packages/apps/ContactsCommon
+f079150 Automatic translation import
 96a41ee Automatic translation import
 
    * packages/apps/DSPManager
 40d14d5 Automatic translation import
 
    * packages/apps/DeskClock
+ee64fd4 Automatic translation import
 dc67268 Automatic translation import
 
    * packages/apps/Dialer
+6b47b9a Automatic translation import
 4b18125 Automatic translation import
 
    * packages/apps/Email
+34d1069 Automatic translation import
 5f0ea8a Automatic translation import
 
+   * packages/apps/Exchange
+e94b9d1 Automatic translation import
+
+   * packages/apps/Gallery2
+7bd9f9d Automatic translation import
+
+   * packages/apps/HTMLViewer
+ff5a0db Automatic translation import
+
    * packages/apps/InCallUI
+180b302 Automatic translation import
 643fb7e Automatic translation import
+
+   * packages/apps/KeyChain
+69005df Automatic translation import
 
    * packages/apps/LockClock
 41d1d40 Automatic translation import
@@ -65,8 +126,23 @@ dc67268 Automatic translation import
    * packages/apps/Mms
 b475f5c Automatic translation import
 
+   * packages/apps/Nfc
+8733d9e Automatic translation import
+
+   * packages/apps/PackageInstaller
+d800eb5 Automatic translation import
+
    * packages/apps/Settings
 7e2e007 Automatic translation import
+
+   * packages/apps/SoundRecorder
+1894c82 Automatic translation import
+
+   * packages/apps/Stk
+90e0af1 Automatic translation import
+
+   * packages/apps/Tag
+f3d8345 Automatic translation import
 
    * packages/apps/ThemeChooser
 ba08eab Automatic translation import
@@ -77,6 +153,9 @@ ba08eab Automatic translation import
    * packages/apps/Trebuchet
 07856ff Automatic translation import
 
+   * packages/apps/UnifiedEmail
+76c2f33 Automatic translation import
+
    * packages/apps/VoicePlus
 24e0fb1 Automatic translation import
 
@@ -86,8 +165,14 @@ ba08eab Automatic translation import
    * packages/providers/DownloadProvider
 a93c720 Automatic translation import
 
+   * packages/providers/UserDictionaryProvider
+768acb6 Automatic translation import
+
    * packages/services/Telephony
 134f8a9 Automatic translation import
+
+   * packages/wallpapers/Galaxy4
+bcb8825 Automatic translation import
 
    * packages/wallpapers/PhaseBeam
 b1b8fe8 Automatic translation import
@@ -161,6 +246,7 @@ d9324e9 Merge tag 'android-4.4.4_r1' into HEAD
    * frameworks/base
 8f4f7bb Fix alignment of small tiles
 a5ff4ed Merge tag 'android-4.4.4_r1' into HEAD
+14abad5 accounts: don't remove accounts while device is in safe mode
 8bbc34f base: properly check that quickboot is enabled
 9023469 base: don't show global actions if shutdown sequence was started
 030d43f QS: New torch icon
@@ -212,77 +298,4 @@ bb192eb Settings: Remove V+ pref if V+ isn't present
    * packages/apps/Trebuchet
 26f5466 Fix layout issues in Trebuchet
 dfbfff1 Merge "Fix protected folder behavior" into cm-11.0
-
-===================================
-Since Tue Jun 17 11:11:26 UTC 2014
-===================================
-
-   * bootable/recovery
-e9a983d stop showing the background icon progress outside it's scope
-
-   * build
-27aae42 "KTU84P"
-7f83b7c MR2.1 - Version 4.4.4.  Here we go!  DO NOT MERGE
-330bc33 colorize non-fatal javac stderr yellow (and actually display it... at all)
-
-   * external/chromium_org
-76d1172 Backport "Recycle old V8 wrapper objects on navigations"
-afae5d8 Block access to java.lang.Object.getClass in injected Java objects
-
-   * external/openssl
-dd1da36 Fix Early CCS bug
-
-   * frameworks/base
-02d3615 Fix for default USB debugging in eng builds.
-63ade05 Add EventLog event for logging of attempts to call java.lang.Object.getClass
-fcd7b7d Remove lockscreen slide delay option (2/2)
-d0456e1 Merge "Don't create idmap if app doesn't have resources.arsc" into cm-11.0
-9cc9257 Install themes and icon packs for secondary users.
-ee4b66d Don't create idmap if app doesn't have resources.arsc
-
-   * frameworks/webview
-7a7dce8 Sanitize selector Intent when handling intent: scheme.
-
-   * packages/apps/CMHome
-c352458 Remove launcher icon for now.
-
-   * packages/apps/Mms
-0d076b9 Merge "Mms: Prevent popup window from closing" into cm-11.0
-
-   * packages/apps/Settings
-a2b5ff1 Settings: Move Navigation buttons out of interface.
-2a149e9 Remove 'More device settings' menu
-7ed4559 Cleanup lockscreen security settings
-d98a006 Remove lockscreen slide delay option (1/2)
-051bf97 Settings: Modify volume override summary for JA translation
-
-   * packages/apps/ThemeChooser
-9fcd13f FUUUU Camels
-
-   * packages/apps/Trebuchet
-40926c6 Fix protected folder behavior
-8ca6c2a Add a custom home screen to Trebuchet.
-56db21e trebuchet: custom home
-cf43a17 Revert font change support
-
-   * vendor/cm
-e7b6b8c Add the CMHome application to common.mk
-
-   * cts
-b8e2dab DO NOT MERGE Update for version bump
-6da2c75 CTS test for OpenSSL's early CCS issue (CVE-2014-0224)
-a3b762f Disable host side holotests also
-8e02f46 CTS report MUST not display raw performance numbers. bug:13347703
-510cfbc media: Refactor and improve robustness of AdaptivePlaybackTest
-e502d40 Fix a concurrency bug in OpenSSLHeartbleedTest.
-3a90060 hardware: consumerir: Increase test pattern length
-c070509 hardware: consumerir: Fix time discrepancy
-1856a4e CTS test for Heartbleed vulnerability in SSLSocket.
-
-   * external/chromium_org/third_party/WebKit
-3fb1c1e Fix Java Bridge wrapper properties cleanup for multi-frame pages
-b13a6de Cherry-pick "Export WebCore::forgetV8ObjectForNPObject"
-
-   * external/chromium_org/third_party/openssl
-e2f305e Cherrypick "OpenSSL: add CVE fixes from 1.0.1h"
 
