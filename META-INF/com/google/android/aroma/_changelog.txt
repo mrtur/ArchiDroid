@@ -1,3 +1,4 @@
 OmniDroid 2.5.0
 
 -cm-11-20140623-NIGHTLY-mako
+-Updated Play Store to 4.8.20 # Also it's white (stock) now
