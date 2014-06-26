@@ -6,3 +6,4 @@ OmniDroid 2.5.0
 -Updated Xposed to 2.7 exp1
 -Updated Nova launcher to 3.0.1
 -Implemented QuickBoot, available in developer settings # Thanks to @cheveguerra
+-Added missing dedupe tool # Thanks to @globs7
