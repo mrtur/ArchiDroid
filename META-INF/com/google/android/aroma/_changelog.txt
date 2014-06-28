@@ -7,3 +7,4 @@ OmniDroid 2.5.0
 -Updated Nova launcher to 3.0.1
 -Implemented QuickBoot, available in developer settings # Thanks to @cheveguerra
 -Added missing dedupe tool # Thanks to @globs7
+-Updated Greenify to 2.3.2
