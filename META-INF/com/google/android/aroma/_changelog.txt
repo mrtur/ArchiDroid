@@ -8,3 +8,4 @@ OmniDroid 2.5.0
 -Implemented QuickBoot, available in developer settings # Thanks to @cheveguerra
 -Added missing dedupe tool # Thanks to @globs7
 -Updated Greenify to 2.3.2
+-Android Terminal Emulator 1.0.62
