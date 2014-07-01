@@ -12,3 +12,4 @@ OmniDroid 2.5.0
 -Updated XPrivacty 2.1.17
 -Updated GravityBox to 3.2.1
 -Updated BetterBatteryStats to 1.16 RC4
+-Updated ArchiDroid binaries (dnsmasq, dnsproxy2, haveged, pixelserv, inotify-tools) to latest versions
