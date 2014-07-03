@@ -11,5 +11,5 @@ OmniDroid 2.5.0
 -Updated Android Terminal Emulator 1.0.62
 -Updated XPrivacty 2.1.19
 -Updated GravityBox to 3.2.3
--Updated BetterBatteryStats to 1.16 RC4
+-Updated BetterBatteryStats to 1.16 RC5
 -Updated MX Player 1.7.28
