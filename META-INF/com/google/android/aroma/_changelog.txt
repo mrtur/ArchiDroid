@@ -12,4 +12,5 @@ OmniDroid 2.5.0
 -Updated XPrivacty 2.1.17
 -Updated GravityBox to 3.2.1
 -Updated BetterBatteryStats to 1.16 RC4
--MX Player 1.7.28
+-Updated MX Player 1.7.28
+-Updated GravityBox to 3.2.3
