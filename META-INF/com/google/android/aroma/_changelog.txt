@@ -2,7 +2,8 @@ OmniDroid 2.5.0
 
 -cm-11-20140710-NIGHTLY-mako
 -Updated Play Store to 4.8.20 # Also it's white (stock) now
--Updated PA GAPPS to 29 June
+-Updated PA GAPPS to 8 July
+-Reverted back to official Google PlayStore # This means that multi-dpi patch is not included anymore in the app itself, use xposed module or patch yourself
 -Updated Xposed to 2.7 exp1
 -Updated Nova launcher to 3.0.1
 -Implemented QuickBoot, available in developer settings # Thanks to @cheveguerra
