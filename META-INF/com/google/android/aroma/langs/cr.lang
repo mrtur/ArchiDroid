@@ -64,8 +64,6 @@ common.deprecated=NE ODOBRAVATI
 common.obsolete=ZASTARIO
 terms.check=Slažem se s uvjetima i pravilima
 terms.confirm=Molimo provjerite ugovor
-terms.check2=Ja u potpunosti razumijem i poštujem to.
-terms.confirm2=Poštujte razvojne programere!
 
 archidroid.tos=ArchiDroid Opći uvjeti
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=Molimo vas podesite postavke kako vama najviše odgovara
 archidroid.kernel.boeffla.desc=Preporučeno remek djelo savršeno za svakoga, s boeffla zvukom i mnogo više mogućnosti
 archidroid.kernel.archi.desc=Featuring perfect synergy with ArchiDroid ROM
 archidroid.kernel.yank.desc=Preporučeno kao zamjena
-archidroid.kernel.googy.desc=Based on Siyah sources. Featuring dual-boot, comes with STweaks
-archidroid.kernel.devil.desc=Based on Perseus sources. Featuring dual-boot, comes with DevilTools
 archidroid.kernel.agni.desc=A very sophisticated kernel, featuring F2FS support
 archidroid.kernel.stock.desc=Dolazi kao zadani ROM kernel
 

@@ -64,8 +64,6 @@ common.deprecated=DEPRECATED
 common.obsolete=OBSOLETE
 terms.check=I agree with Terms and Conditions
 terms.confirm=Please check the agreement!
-terms.check2=I fully understand and respect that
-terms.confirm2=Respect the devs!
 
 archidroid.tos=ArchiDroid Terms and Conditions
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=Please modify settings to your liking
 archidroid.kernel.boeffla.desc=Highly recommended masterpiece perfect for everyone, featuring boeffla sound and many more features
 archidroid.kernel.archi.desc=Featuring perfect synergy with ArchiDroid ROM
 archidroid.kernel.yank.desc=Recommended as an alternative
-archidroid.kernel.googy.desc=Based on Siyah sources. Featuring dual-boot, comes with STweaks
-archidroid.kernel.devil.desc=Based on Perseus sources. Featuring dual-boot, comes with DevilTools
 archidroid.kernel.agni.desc=A very sophisticated kernel, featuring F2FS support
 archidroid.kernel.stock.desc=Comes as a default kernel with ROM
 

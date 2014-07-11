@@ -64,8 +64,6 @@ common.deprecated=توصيه شده
 common.obsolete=منسوخ
 terms.check=من با شرايط و ضوابط موافقم
 terms.confirm=لطفا مورد را بررسي کنيد!
-terms.check2=من به طور کامل فهميدم و به آن احترام ميگذارم!
-terms.confirm2=حقوق توسعه دهنده
 
 archidroid.tos=شرايط و ضوابط آرچي درويد
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=لطفا  تنظيمات را طبق دلخواه تغي�
 archidroid.kernel.boeffla.desc=اين براي همه افراد توصيه ميشود ، خصوصيات صداي بوفلا و خيلي خصوصيات ديگر
 archidroid.kernel.archi.desc=Featuring perfect synergy with ArchiDroid ROM
 archidroid.kernel.yank.desc=بعنوان جايگزين توصيه ميشود
-archidroid.kernel.googy.desc=Based on Siyah sources. Featuring dual-boot, comes with STweaks
-archidroid.kernel.devil.desc=Based on Perseus sources. Featuring dual-boot, comes with DevilTools
 archidroid.kernel.agni.desc=A very sophisticated kernel, featuring F2FS support
 archidroid.kernel.stock.desc=کرنل استوک ، برگرفته از خود رام
 

@@ -64,8 +64,6 @@ common.deprecated=AFGESCHAFT
 common.obsolete=VEROUDERD
 terms.check=Ik ga akkoord met de Algemene Voorwaarden
 terms.confirm=Ga alsjeblieft akkoord!
-terms.check2=Ik begrijp en respecteer dat
-terms.confirm2=Respecteer de ontwikkelaars!
 
 archidroid.tos=Archidroid Algemene Voorwaarden
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=Pas hier de instellingen naar je eigen keuzes aan.
 archidroid.kernel.boeffla.desc=Sterk aanbevolen meesterwerk, perfect voor iedereen. Heeft Boeffla geluid en veel meer opties
 archidroid.kernel.archi.desc=Heeft perfecte synergie met ArchiDroid ROM
 archidroid.kernel.yank.desc=Aanbevolen als alternatief
-archidroid.kernel.googy.desc=Gebaseerd op Siyah bronnen. Ondersteund dual-boot, komt met STweaks
-archidroid.kernel.devil.desc=Gebaseerd op Perseus bronnen. Ondersteund dual-boot, komt met DevilTools
 archidroid.kernel.agni.desc=Een zeer geavanceerder kernel, Heeft F2FS ondersteuning
 archidroid.kernel.stock.desc=Standaard ROM kernel 
 

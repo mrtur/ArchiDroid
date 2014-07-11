@@ -64,8 +64,6 @@ common.deprecated=ÖNERİLMEMEKTE
 common.obsolete=ESKİ
 terms.check=Şart ve koşulları kabul ediyorum.
 terms.confirm=Sözleşmeyi kabul edin!
-terms.check2=Tamamen katılıyor ve onaylıyorum.
-terms.confirm2=Yazılımcıya Saygı Gösterin!
 
 archidroid.tos=ArchiDroid Şart ve Koşullar
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=Lütfen kullanım tarzınıza göre özelleştirin.
 archidroid.kernel.boeffla.desc=Herkese tavsiye edilen mükemmel bir başyapıt, Boeffla ses ve bir çok özelliğe sahip.
 archidroid.kernel.archi.desc=Featuring perfect synergy with ArchiDroid ROM
 archidroid.kernel.yank.desc=Recommended as an alternative
-archidroid.kernel.googy.desc=Based on Siyah sources. Featuring dual-boot, comes with STweaks
-archidroid.kernel.devil.desc=Based on Perseus sources. Featuring dual-boot, comes with DevilTools
 archidroid.kernel.agni.desc=A very sophisticated kernel, featuring F2FS support
 archidroid.kernel.stock.desc=ROM ile birlikte gelen kernel.
 

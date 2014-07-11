@@ -64,8 +64,6 @@ common.deprecated=PRZESTARZAŁE
 common.obsolete=NIEWSPIERANE
 terms.check=Zgadzam się z tymi warunkami
 terms.confirm=Musisz wyrazić zgodę aby kontynuować!
-terms.check2=Całkowicie to rozumiem
-terms.confirm2=Musisz wyrazić zgodę aby kontynuować!
 
 archidroid.tos=Warunki używania ArchiDroid
 archidroid.preview.desc=Po zaznaczeniu, będziesz mógł podejrzeć na następnej stronie jak wygląda wybrana opcja
@@ -119,8 +117,6 @@ archidroid.custom.desc=Zmodyfikuj proszę poniższe ustawienia do Twoich predysp
 archidroid.kernel.boeffla.desc=Wysoce zalecane arcydzieło dla każdego, wyróżniające się silnikiem boeffla oraz wieloma innymi usprawnieniami
 archidroid.kernel.archi.desc=Zalecany dla pełnej synergii z romem ArchiDroid
 archidroid.kernel.yank.desc=Zalecany jako alternatywa
-archidroid.kernel.googy.desc=Bazowany na źródłach Siyah. Posiada dual-boot, zawiera STweaks
-archidroid.kernel.devil.desc=Bazowany na źródłach Perseus. Posiada dual-boot, zawiera DevilTools
 archidroid.kernel.agni.desc=Bardzo wyrafinowany kernel, zawierający m.in wsparcie F2FS
 archidroid.kernel.stock.desc=Pochodzący prosto z ROMu
 

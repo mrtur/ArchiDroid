@@ -64,8 +64,6 @@ common.deprecated=ΔΕΝ ΠΡΟΤΕΙΝΕΤΑΙ
 common.obsolete=ΑΠΑΡΧΑΙΩΜΕΝΟ
 terms.check=Συμφωνώ με τους Όρους Χρήσης
 terms.confirm=Παρακαλώ ελέγξτε τη συμφωνία!
-terms.check2=Το κατανοώ και το σέβομαι πλήρως
-terms.confirm2=Σεβαστείτε τους προγραμματιστές!
 
 archidroid.tos=Όροι Χρήσης ArchiDroid
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=Παρακαλώ τροποποιήστε τις ρυθμ
 archidroid.kernel.boeffla.desc=Ένα αριστούργημα που προτείνεται ανεπιφύλακτα, τέλειο για όλους που περιλαμβάνει ήχο boeffla και πολλά άλλα χαρακτηριστικά
 archidroid.kernel.archi.desc=Featuring perfect synergy with ArchiDroid ROM
 archidroid.kernel.yank.desc=Προτείνεται ως εναλλακτικός
-archidroid.kernel.googy.desc=Βασισμένος στον κώδικα του Siyah. Περιλαμβάνει dual-boot, μαζί με STweaks
-archidroid.kernel.devil.desc=Βασισμένος στον κώδικα του Perseus. Περιλαμβάνει dual-boot, μαζί με DevilTools
 archidroid.kernel.agni.desc=A very sophisticated kernel, featuring F2FS support
 archidroid.kernel.stock.desc=Έρχεται ως προεπιλεγμένος kernel με την ROM
 

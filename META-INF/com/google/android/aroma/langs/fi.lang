@@ -64,8 +64,6 @@ common.deprecated=EI KÄYTÖSSÄ OLEVA
 common.obsolete=VANHENTUNUT
 terms.check=Hyväksyn käyttöehdot
 terms.confirm=Ole hyvä ja hyväksy käyttöehdot!
-terms.check2=Ymmärretty ja hyväksytty
-terms.confirm2=Kunnioita kehittäjiä!
 
 archidroid.tos=ArchiDroid Terms and Conditions
 archidroid.preview.desc=When checked, you'll see a sample of the selected item on the next page
@@ -119,8 +117,6 @@ archidroid.custom.desc=Muokkaa asetukset mieleiseksesi
 archidroid.kernel.boeffla.desc=Erittäin suositeltu mestariteos soveltuu kaikille, mukana boeffla-ääni ja paljon muuta
 archidroid.kernel.archi.desc=Featuring perfect synergy with ArchiDroid ROM
 archidroid.kernel.yank.desc=Recommended as an alternative
-archidroid.kernel.googy.desc=Based on Siyah sources. Featuring dual-boot, comes with STweaks
-archidroid.kernel.devil.desc=Based on Perseus sources. Featuring dual-boot, comes with DevilTools
 archidroid.kernel.agni.desc=A very sophisticated kernel, featuring F2FS support
 archidroid.kernel.stock.desc=ROM oletusydin
 
