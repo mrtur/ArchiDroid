@@ -15,3 +15,4 @@ OmniDroid 2.5.0
 -Updated BetterBatteryStats to 1.16
 -Updated MX Player 1.7.28
 -Updated all ArchiDroid backend tools to latest versions # They're now also compatible with every armv7-a NEON device, previously only CortexA9+
+-Fixed rebooting to recovery after plugging charger to powered down phone in ArchiDroid 1.X
