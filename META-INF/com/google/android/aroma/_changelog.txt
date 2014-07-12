@@ -19,3 +19,5 @@ OmniDroid 2.5.0
 -Fixed ArchiDroid backend not being executed in some scenarios
 -ArchiDroid_Init code review
 -ArchiDroid_RunOnce code review
+-PlayStoreFix is now included with Xposed
+-App Settings is now included with Xposed
