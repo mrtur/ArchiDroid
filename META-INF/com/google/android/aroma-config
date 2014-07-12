@@ -31,7 +31,7 @@ ini_set("rom_name",             "ArchiDroid");
 ini_set("rom_version",          "2.5.1");
 ini_set("rom_author",           "JustArchi");
 ini_set("rom_device",           "Samsung Galaxy S3");
-ini_set("rom_date",             "July XXth, 2014");
+ini_set("rom_date",             "July 12th, 2014");
 
 ##
 # Show Animated Splash
@@ -349,7 +349,6 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 			"archidroidxposed.prop",
 
 			"modules","<#selectbg_g>Xposed Modules</#>","","group",
-			"appsettings","App Settings","<~archidroid.xposed.appsettings.desc>","check.checked",
 			"gravitybox","GravityBox","<~archidroid.xposed.gravitybox.desc>","check.checked",
 			"xprivacy","XPrivacy","<~archidroid.xposed.xprivacy.desc>","check"
 		);
