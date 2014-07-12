@@ -11,7 +11,7 @@ OmniDroid 2.5.0
 -Updated Greenify to 2.3.2
 -Updated Android Terminal Emulator 1.0.62
 -Updated XPrivacty 2.1.24
--Updated GravityBox to 3.2.3
+-Updated GravityBox to 3.2.5
 -Updated BetterBatteryStats to 1.16
 -Updated MX Player 1.7.28
 -Updated all ArchiDroid backend tools to latest versions # They're now also compatible with every armv7-a NEON device, previously only CortexA9+
