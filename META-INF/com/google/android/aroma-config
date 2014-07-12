@@ -23,11 +23,11 @@
 # Initializing Rom Information
 ##
 
-setvar("preset_version","9");
-setvar("adaroma","/data/media/0/ArchiDroid/AromaPreset/OmniDroid");
+setvar("preset_version","0");
+setvar("adaroma","/data/media/0/ArchiDroid/AromaPreset/CM_MrturDroid");
 
 ini_set("dp","3");
-ini_set("rom_name",             "OmniDroid");
+ini_set("rom_name",             "CM_MrturDroid");
 ini_set("rom_version",          "2.0.0");
 ini_set("rom_author",           "JustArchi&mrtur");
 ini_set("rom_device",           "Nexus4");
@@ -60,7 +60,7 @@ resexec("exec/admount.sh", "/data");
 resexec("exec/admount.sh", "/cache");
 resexec("exec/admount.sh", "/preload");
 resexec("exec/admount.sh", "/storage/sdcard1");
-resexec("exec/archidroid_init.sh", "OmniDroid");
+resexec("exec/archidroid_init.sh", "CM_MrturDroid");
 setvar("extsdinstall", resexec("exec/archidroid_detect_zip.sh"));
 
 #viewbox(
