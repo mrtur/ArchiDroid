@@ -10,7 +10,7 @@ OmniDroid 2.5.0
 -Added missing dedupe tool # Thanks to @globs7
 -Updated Greenify to 2.3.2
 -Updated Android Terminal Emulator 1.0.62
--Updated XPrivacty 2.1.22
+-Updated XPrivacty 2.1.24
 -Updated GravityBox to 3.2.3
 -Updated BetterBatteryStats to 1.16
 -Updated MX Player 1.7.28
