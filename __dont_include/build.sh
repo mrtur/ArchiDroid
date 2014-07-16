@@ -22,7 +22,7 @@
 # limitations under the License.
 
 set -e
-VERSION=2.5.1
+VERSION=2.5.2
 
 # HOW TO PORT ARCHIDROID TO OTHER DEVICE
 # 1. Make sure you have a good base, this can be a stock ROM or AOSP ROM. Put it in .zip format in the root of ArchiDroid.
@@ -142,7 +142,7 @@ if [[ "$SAMMY" -eq 0 && "$NOBUILD" -eq 0 ]]; then
 			fi
 		fi
 		if [[ -d "$ADOUT" ]]; then
-			find "$ADOUT" -mindepth 1 -maxdepth 1 -iname "$ADZIP"*.zip | while read line; do
+			find "$ADOUT" -mindepth 1 -maxdepth 1 -iname "*.zip" | while read line; do
 				echo "Removing $line"
 				rm -f "$line"
 			done
