@@ -22,3 +22,4 @@ CM_MrturDroid 2.5.0
 -PlayStoreFix is now included with Xposed
 -App Settings is now included with Xposed
 -Updated Google Keyboard
+-Removed BBS app as per developer request
