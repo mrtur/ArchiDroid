@@ -1,6 +1,6 @@
 CM_MrturDroid 2.5.0
 
--cm-11-20140715-NIGHTLY-mako
+-cm-11-20140804-NIGHTLY-mako
 -Updated Play Store to 4.8.20 # Also it's white (stock) now
 -Updated PA GAPPS to 29 July
 -Reverted back to official Google PlayStore # This means that multi-dpi patch is not included anymore in the app itself, use xposed module or patch yourself

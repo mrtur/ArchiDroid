@@ -1,299 +1,251 @@
 ===================================
-Since Mon Jul 14 10:57:48 UTC 2014
+Since Sun Aug  3 11:49:40 UTC 2014
+===================================
+
+   * external/libnfc-nci
+d62f251 Adding NXP NCI Hal implementation
+
+   * frameworks/base
+29891ff Add navbar background preview to ThemesContract
+5264ec3 Include default wallpaper in LockscreenWallpaperPickerActivity
+0ab2e02 Move 3rd party wallpaper pickers to the front
+bdd3242 SystemUI: Replace CompassTile RotateAnimation with tweening
+
+   * hardware/libhardware
+1dc5e25 Revert "Add camera parameters for htc evo 3D. (2/2)"
+
+   * packages/apps/Dialer
+1759c04 Dialer: Fix T9 for Hebrew
+
+   * packages/apps/Settings
+2e9cc68 Disable settings search on all subactivities.
+
+   * packages/services/Telephony
+4328f99 Merge "Don't overzealously disable all preferences in airplane mode." into cm-11.0
+
+   * vendor/cm
+ac29397 Update translators' list for Russian
+93a2149 Remove unnecessary duplicate
+
+===================================
+Since Sat Aug  2 12:38:49 UTC 2014
+===================================
+
+   * packages/apps/Settings
+2b7e31a Add summary to notification filtering
+77e1784 Proximity Wake-Up : adjust strings
+
+===================================
+Since Fri Aug  1 13:51:40 UTC 2014
 ===================================
 
    * bootable/recovery-cm
-c1c25a6 sr: Support BGRA framebuffer
+043161d sr: Fix overlay issues
+246b224 Don't abort on read_file if the file is missing.
+d75c6e7 fix unnecessarily slow writing of EMMC partitions
+416f363 sr: touch: Only detect release if pressed
+fb4ba6c sr: bu: Show backup/restore progress in dialog text
+52a2f3f sr: Touch UI
+
+   * external/busybox
+1071f3e Fix remaining bionic warnings
 
    * frameworks/base
-58cc0ed SystemUI: fix torch toggle delay on boot
-4741d5b IconPackHelper: Respect the original size of bitmap icons
-36672e7 SystemUI: allow for the clock to be centered (1 of 2)
-6623a41 Fix ResourceNotFoundException when updating  applied theme
+26ff47e [2/2] Add option to change size of QS ribbon bar
+203fdae Framework: Make the dialog divider color themeable
+9035415 SystemUI: Separate system bar BGs for themes
 
-   * packages/apps/Dialer
-d046631 Merge "Dialer: Make the call stats spinner match the other actionbar theming" into cm-11.0
+   * packages/apps/CMHome
+7aa1a1e Add license file.
 
    * packages/apps/InCallUI
-511565b Fix derp.
+d93fdb3 Fix call buttons being incorrectly hidden.
+
+   * packages/apps/Mms
+a4f5950 Per conversation notification settings/ringtones
 
    * packages/apps/Settings
-6445c9c SystemUI: allow for the clock to be centered (2 of 2)
-
-   * packages/apps/Torch
-6a22340 Torch: fix torch toggle delay on boot
-
-   * packages/apps/Trebuchet
-7a1a596 Fix:
-daf737a Trebuchet: Further adjustment of panel overview glitch fix
+225e3b1 [1/2] Add option to change size of QS ribbon bar
+b3913f3 Automatic translation import
 
 ===================================
-Since Sat Jul 12 11:46:03 UTC 2014
-===================================
-
-   * frameworks/av
-a7a9dac stagefright: Fix stub function
-d869590 stagefright: Extra checks for HW AAC decoder
-d54cd53 stagefright: Only invoker HW decoder for actual decoding
-40d7e78 stagefright: Use 64 bits for type mask in MediaCodecList
-a3a69ed Add support for MPEG audio elementary streams in HLS
-671c624 Audio streaming error when playing a stream that contains "end of file".
-689e051 Disconnect the mediaplayer when reset
-bc3d1d2 Stop thread before deleting object reference
-8e644ec HLS: getDuration should return -1 for live streams
-fc64a20 audio:mute duration at the beginning of the recording
-50a1a10 stagefright: remove target specific checks for hfr
-b56c00c stagefright: Correct timescale in MvHd for HFR
-8b64870 stagefright: Correct total duration of HFR clips
-89e06c5 stagefright: Use HW AAC decoder in ACodec if requested
-047e5b0 Can't play AAC file with ID3 tag.
-b247bfd Fix aac decoder flush
-042a18d mediaplayerservice: Untangle legacy callback function
-
-   * frameworks/base
-f3866d6 Fix systemui crash on boot
-
-   * packages/apps/InCallUI
-43e6be2 Don't expand the contact picture behind the call buttons during call.
-
-   * packages/apps/Trebuchet
-fac5694 Revert "trebuchet: remove CALL_PHONE permission"
-
-===================================
-Since Fri Jul 11 11:22:58 UTC 2014
+Since Thu Jul 31 11:30:47 UTC 2014
 ===================================
 
    * external/koush/Superuser
-7d8d00f Automatic translation import
+0deb4d4 Automatic translation import
 
-   * external/whispersystems/WhisperPush
-17bd1fd WhisperPush: Do gcm registration in background.
-
-   * frameworks/av
-5917b17 Revert "libstagefright: set frame packing from codec config"
-
-   * frameworks/base
-8f754f5 settings: Fix loading of some initial values
-3e3895c Themes: Allow theming navbar bg color
-c7a4aa9 SystemUI: fix double tap to sleep not working with secure lock screen
-a9d56a1 core: Add support for Basque
-e04b8c7 Automatic translation import
-bb60a70 InputDevices: Prepare for crowdin
-
-   * packages/apps/Dialer
-6ca98b1 Automatic translation import
-
-   * packages/apps/InCallUI
-d614819 InCallUI: Workaround for aapt warnings
-
-   * packages/apps/Settings
-31a5d3b Settings: Always show search on multipane devices.
-39f6aca settings: prevent multiple highlights in settings search
-d6c3173 Apply match spans synchronously to avoid a race condition
-1628a81 settings: properly count preferences in group
-82359b4 Settings: Modify AOSP JA translation
-124efd1 Automatic translation import
-
-   * packages/services/Telephony
-477091e Revert "Network Settings: move APN to common area, both CDMA and GSM use this"
-
-   * packages/wallpapers/PhotoPhase
-411c4e6 PhotoPhase: Remove references to inexistent strings
-b7a84c6 Automatic translation import
-
-   * vendor/cm
-8cc3992 otasigcheck: Fix the sed statement for multi-digit indices
-
-===================================
-Since Thu Jul 10 11:08:07 UTC 2014
-===================================
+   * android
+4c4b2ff Add ANT+ repositories
 
    * bootable/recovery
-3350c88 exit instead of return if sideload file creation fails
-cbe5d00 fix vulnerability in bspatch
-f6df6a0 add --shutdown_after option to recovery
-97f9e95 recovery: fix building with pointer-to-int errors turned on
-2ffad65 minadbd: remove dead code
-8e1155a adbd: switch to su domain when running as root
-a7498bb Add seclabel to minivold
-881f631 Set SELinux security contexts correctly for init and services.
-547c06f Allow custom bootloader msg offset in block misc
-2301cbc Do not wipe block misc on bootloader msg update
+67cd9db Let minivold run in the recovery se domain
 
    * bootable/recovery-cm
-a6d2f4b Allow custom bootloader msg offset in block misc
-477c9de Do not wipe block misc on bootloader msg update
-
-   * build
-a986995 Revert "Revert "ota: Make sure we don't install on top of an incompatible system""
-5875e34 Revert "ota: Make sure we don't install on top of an incompatible system"
-b8e85ff build: Store the jenkins build number in misc_info
-a0c7566 ota: Make sure we don't install on top of an incompatible system
+adaf656 sr: updater: Fix multi-stage docs and code
+322e5b4 sr: updater: Use custom bootloader msg offset for stage functions
 
    * external/whispersystems/WhisperPush
-a745e45 Automatic translation import
-
-   * frameworks/base
-9584ba5 SystemUI: improve one finger notification expansion
-a55aa1a frameworks: move safe volume warning above expanded volume panel
-d84e336 HeadsUp: Fix dismiss on back key press.
-
-   * packages/apps/Apollo
-3c5bc36 Automatic translation import
-
-   * packages/apps/Bluetooth
-05c3b13 Automatic translation import
-
-   * packages/apps/BluetoothExt
-2338858 Automatic translation import
-
-   * packages/apps/Browser
-7ad36fb Automatic translation import
-418f198 Browser: add duckduckgo search enginge to RU locale
-
-   * packages/apps/CMAccount
-62185de Automatic translation import
-5f2cb2c Merge "DEFAULT_THEME_APPLIED_ON_FIRST_BOOT setting has been removed" into cm-11.0
-a199c4a DEFAULT_THEME_APPLIED_ON_FIRST_BOOT setting has been removed
-2bff8d0 CMAccount: Don't display account setup pages on restricted profiles.
-
-   * packages/apps/CMFileManager
-232e210 Automatic translation import
-
-   * packages/apps/CMUpdater
-0bf8e16 Automatic translation import
-
-   * packages/apps/Calculator
-b08cb5b Automatic translation import
-
-   * packages/apps/Calendar
-6415d23 Automatic translation import
-
-   * packages/apps/Camera2
-f9ed45c Automatic translation import
-
-   * packages/apps/ContactsCommon
-8cf37b9 Automatic translation import
-
-   * packages/apps/DSPManager
-ef166ee Automatic translation import
-
-   * packages/apps/DeskClock
-97f14e1 Automatic translation import
-
-   * packages/apps/Email
-d4492fd Automatic translation import
-
-   * packages/apps/Gallery2
-1e23f6a Automatic translation import
-
-   * packages/apps/InCallUI
-ab698cb Automatic translation import
-
-   * packages/apps/LockClock
-8728af5 Automatic translation import
-
-   * packages/apps/Mms
-62b5f3a Automatic translation import
-2b2123a Mms: Remove conflicting AOSP translations
-bdc92a0 Merge "Mms: Remove white background on the timestamp" into cm-11.0
-
-   * packages/apps/Settings
-a86af28 Settings: persist double tap to wake state
-
-   * packages/apps/SoundRecorder
-4675584 Automatic translation import
-
-   * packages/apps/Stk
-ac73230 Automatic translation import
-
-   * packages/apps/ThemeChooser
-e7f72cf Automatic translation import
-
-   * packages/apps/Torch
-ecedf0d Automatic translation import
-
-   * packages/apps/Trebuchet
-65a1a51 Automatic translation import
-25e3c5e Trebuchet : Require for all users
-b2f186e Fix Overview Panel glitch when animating Workspace into overview mode.
-
-   * packages/apps/UnifiedEmail
-9610797 Automatic translation import
-
-   * packages/apps/VoicePlus
-041d075 Automatic translation import
-
-   * packages/inputmethods/LatinIME
-2b30bd6 Automatic translation import
-
-   * packages/providers/DownloadProvider
-07a8c77 Automatic translation import
-
-   * packages/providers/ThemesProvider
-f7d4760 Automatic translation import
-
-   * packages/services/Telephony
-1cd6b33 Automatic translation import
-
-   * packages/wallpapers/PhotoPhase
-14d3f73 photophase: fix summary for effect types
-
-   * vendor/cm
-63c0f71 otasigcheck: include multi-digit cert indices
-7a65923 otasigcheck: set verification package to com.android.htmlviewer
-af91758 common: Set property for the CM releasetype
-aff5e54 ota: Validate any installed data's signature against our own
-
-===================================
-Since Wed Jul  9 09:47:48 UTC 2014
-===================================
-
-   * external/koush/Superuser
-1dd6753 Revert "Superuser: Don't duplicate 'Allow' string"
-6af4772 Superuser: Don't duplicate 'Allow' string
-
-   * build
-29a9b31 build: Disable Tamil locale
-
-   * external/whispersystems/WhisperPush
-5190ad4 WhisperPush: More kitkat ActionBar fixes
+883da5b Automatic translation import
 
    * frameworks/av
-a7191f0 libstagefright: getHFRRatio should return 1 by default
+4142e51 Camera: Add Samsung klte camera parameters
 
    * frameworks/base
-614255b WallpaperCropper: load wallpapers in the background
-f523fde quiethours: do not play screenshot sound
-c7f5049 Themes: Add URI for querying previews of applied components.
-e47f497 Themes: Add method to "apply all" a theme
+1317de4 Automatic translation import
+74fbf2e Add new Card Unavailable reason for SIM power down in APM.
 
-   * packages/apps/CellBroadcastReceiver
-af4bb4d CellBroadcastReceiver: More kitkat ActionBar fixes
+   * frameworks/opt/telephony
+6ee95d8 IMS: Add API to set create time for a Connection.
+c8a0f99 IMS : Notifying CallModifyRequest Fail or sucess
+e33fd4c Add ServiceStatus class for uniform capability handling
+6af3410 Change to return proper MNC in case of CSIM
+a71dd2b Fix voicemail count issue.
+
+   * frameworks/opt/telephony-msim
+e4fb032 Merge branch 'LNX.LA.3.5.2.2_rb1' of git://codeaurora.org/platform/frameworks/opt/telephony-msim into cm-11.0
+f7a22ed Revert "Adjust MccTable.updateMccMncConfiguration to 4.4.3 API"
+
+   * packages/apps/Apollo
+3b7f423 Automatic translation import
+
+   * packages/apps/BluetoothExt
+7014345 Automatic translation import
+
+   * packages/apps/CMAccount
+9fabb86 Automatic translation import
+
+   * packages/apps/CMFileManager
+2cbe24b Automatic translation import
+
+   * packages/apps/CMHome
+cf4c425 Automatic translation import
+
+   * packages/apps/CMUpdater
+0fa31fb Automatic translation import
+
+   * packages/apps/Calculator
+5b614da Automatic translation import
+
+   * packages/apps/Camera2
+1fd2916 Automatic translation import
+
+   * packages/apps/DSPManager
+ae216a6 Automatic translation import
+
+   * packages/apps/DeskClock
+2253885 Automatic translation import
+
+   * packages/apps/Dialer
+b96fa39 Automatic translation import
 
    * packages/apps/Email
-83d2d34 Email: Set untranslatable
+8b6ee4f Automatic translation import
+
+   * packages/apps/InCallUI
+4175607 Automatic translation import
+
+   * packages/apps/LockClock
+d45cae6 Automatic translation import
 
    * packages/apps/Mms
-d188b3f Mms: Remove white background on the timestamp
-688681c Fix a crash when scrolling while a SMS is delayed.
+f9f543f Automatic translation import
+
+   * packages/apps/Torch
+2b54264 Automatic translation import
 
    * packages/apps/Trebuchet
-21b611f Trebuchet: Update dummy strings
-cc8310c Trebuchet: Add a string for JA translation
-2168cc8 trebuchet: remove CALL_PHONE permission
-a83cd3d Protected Apps:  - Fix remove all apps button bug
-abb65fb Fix for disappearing icons bug.
+9b25292 Automatic translation import
 
-   * packages/apps/UnifiedEmail
-d671bc7 UnifiedEmail: Update "Fetching message" string
+   * packages/inputmethods/LatinIME
+54d1206 Automatic translation import
 
    * packages/services/Telephony
-f100f85 FDN: Don't crash when attempting to change the PIN2 without a SIM
+b4a8d2f Don't overzealously disable all preferences in airplane mode.
+811982c Automatic translation import
+
+   * packages/wallpapers/Galaxy4
+41c164a Automatic translation import
 
    * packages/wallpapers/PhotoPhase
-22aecd3 Improve preference summary strings.
+ba952a8 Automatic translation import
 
    * vendor/cm
-1df415b common: Disable multithreaded dextop on RELEASE and SNAPSHOT builds
+34ee56f Disable multithreaded dexopt by default
+
+===================================
+Since Tue Jul 29 11:40:05 UTC 2014
+===================================
+
+   * bionic
+18a8907 bionic: update memmove for 32 bits atomic
+
+   * external/busybox
+477b2eb android: backport pty implementation from aosp/master
+1f21642 Makefile: remove warnings on initial version check
+f641061 Android: final cleanup of new build system
+
+   * frameworks/base
+b6ced92 Be sure to shutdown the proximity sensor after display wake
+e02a4ba WallpaperCropper: fix lockscreen wallpaper "Set wallpaper" string
+3d07d4f Load original drawable if cached icon throws NotFoundException
+a5e1458 Themes: Whitelist animations
+
+   * hardware/qcom/gps
+fcd92b0 Get unbuildable loc_api module out of the way
+
+   * kernel/google/msm
+e5bf64b ARM: 7759/1: decouple CPU offlining from reboot/shutdown
+aceb52a ARM: Use TTBR1 instead of reserved context ID
+0427b44 ARM: 7408/1: cacheflush: return error to userspace when flushing syscall fails
+bfc0345 ARM: 7569/1: mm: uninitialized warning corrections
+70f0da9 ARM: 7953/1: mm: ensure TLB invalidation is complete before enabling MMU
+b8de061 ARM: 7784/1: mm: ensure SMP alternates assemble to exactly 4 bytes with Thumb-2
+696eaff ARM: 7691/1: mm: kill unused TLB_CAN_READ_FROM_L1_CACHE and use ALT_SMP instead
+641fb8f ARM: 7660/1: tlb: add branch predictor maintenance operations
+647e818 ARM: 7678/1: Work around faulty ISAR0 register in some Krait CPUs
+f6cce71 ARM: fix scheduling while atomic warning in alignment handling code
+1aabd77 ARM: 7752/1: errata: LoUIS bit field in CLIDR register is incorrect
+61a21fc ARM: 7606/1: cache: flush to LoUU instead of LoUIS on uniprocessor CPUs
+9e2bcda ARM: mm: rename jump labels in v7_flush_dcache_all function
+7d6887e ARM: mm: implement LoUIS API for cache maintenance ops
+748a40d ARM: 7747/1: pcpu: ensure __my_cpu_offset cannot be re-ordered across barrier()
+5bdb171 ARM: 7587/1: implement optimized percpu variable access
+1f1f0db ARM: 7680/1: Detect support for SDIV/UDIV from ISAR0 register
+d6f8599 ARM: 7559/1: smp: switch away from the idmap before updating init_mm.mm_count
+1c9150b lib: cpu_rmap: avoid flushing all workqueues
+f1154d1 ARM: gic: use a private mapping for CPU target interfaces
+c04613e ARM: 7573/1: idmap: use flush_cache_louis() and flush TLBs only when necessary
+a7de555 ARM: 7542/1: mm: fix cache LoUIS API for xscale and feroceon
+1d4f474 ARM: mm: update __v7_setup() to the new LoUIS cache maintenance API
+583c133 ARM: kernel: update __cpu_disable to use cache LoUIS maintenance API
+c62d92d ARM: cpu hotplug: remove majority of cache flushing from platforms
+a0e2921 msm: hotplug: Block hotplug removal of CPU0
+e664074 ARM: smp: flush L1 cache in cpu_die()
+9350661 ARM: Don't dump vmalloc addresses with show_data()
+1a9a810 rcu: Add RCU_FAST_NO_HZ tracing for idle exit
+6d7a27b rcu: Add a module parameter to force use of expedited RCU primitives
+aad5efb [backport] sched_rt: Upstream fixes
+09c02fe [backport] sched: Misc upstream scheduler improvements
+c535f34 [backport]: sched: Load-based CPU boosting
+8279fcb sched: Remove get_online_cpus() usage
+cf015f4 Revert "Revert "sched: add sysctl for controlling task migrations on wake""
+13312f9 Revert "Revert "sched: add PF_WAKE_UP_IDLE""
+3c43da8 tracing/sched: Track per-cpu rt and non-rt cpu_load.
+0d530d2 kthread: Fix the race condition when kthread is parked
+
+   * packages/apps/CMHome
+8ac22f2 Fix UndoBar display issue in Google Now mode.
+
+   * packages/apps/Settings
+c2afd03 Settings: Fix camel case
+
+   * packages/apps/Trebuchet
+6903b91 Trebuchet : Add folder on folder checks
+
+   * packages/services/Telephony
+948b128 IMS: Only enable IMS calls if IMS service status shows enabled
+
+   * vendor/cm
+1c4bf35 This should make your clean-up easier
 
