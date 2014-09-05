@@ -11,7 +11,7 @@ CM_MrturDroid 2.5.0
 -Updated Greenify to 2.3.2
 -Updated Android Terminal Emulator 1.0.62
 -Updated XPrivacy 3.1.1
--Updated GravityBox to 3.2.5
+-Updated GravityBox to 3.4.1
 -Updated BetterBatteryStats to 1.16
 -Updated MX Player 1.7.31
 -Updated App Settings to 1.10
