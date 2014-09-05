@@ -10,7 +10,7 @@ CM_MrturDroid 2.5.0
 -Updated Nova launcher to 3.1
 -Implemented QuickBoot, available in developer settings # Thanks to @cheveguerra
 -Added missing dedupe tool # Thanks to @globs7
--Updated Greenify to 2.3.2
+-Updated Greenify to 2.4
 -Updated Android Terminal Emulator 1.0.62
 -Updated XPrivacy 3.1.1
 -Updated GravityBox to 3.4.1
