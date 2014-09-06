@@ -1,6 +1,7 @@
 CM_MrturDroid 2.5.0
 
 -[!] Enabling Navigation bar in AROMA now will also disable corresponding hardware keys (BACK, HOME, MENU)
+-Haveged is now disabled by default # ArchiKernel includes a patch for non-depleting entropy, so this can be safely turned off for lower overhead
 -ArchiDroid's backend now creates a "rainbow" from LEDs during booting process # Perfect way to tell if backend has been executed properly
 -cm-11-20140804-NIGHTLY-mako
 -Updated Play Store to 4.8.20 # Also it's white (stock) now
