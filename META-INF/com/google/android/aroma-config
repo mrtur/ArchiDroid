@@ -23,7 +23,7 @@
 # Initializing Rom Information
 ##
 
-setvar("preset_version","11");
+setvar("preset_version","12");
 setvar("adaroma","/data/media/0/ArchiDroid/AromaPreset/2.X");
 
 ini_set("dp","3");
@@ -31,7 +31,7 @@ ini_set("rom_name",             "ArchiDroid");
 ini_set("rom_version",          "2.5.3");
 ini_set("rom_author",           "JustArchi");
 ini_set("rom_device",           "Samsung Galaxy S3");
-ini_set("rom_date",             "August XXth, 2014");
+ini_set("rom_date",             "September 6th, 2014");
 
 ##
 # Show Animated Splash
@@ -301,10 +301,15 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"semco","Semco","","select",
 		"semcosh","Semcosh","","select",
 
+		"superuser","<#selectbg_g>Superuser</#>","","group",
+		"koush","Superuser by Koush","<~archidroid.superuser.koush.desc>","select.selected",
+		"chainfire","SuperSU by Chainfire","<~archidroid.superuser.chainfire.desc>","select",
+		"none","<~common.none>","<~archidroid.superuser.none.desc>","select",
+
 		"other","<#selectbg_g><~archidroid.other></#>","","group",
 		"archidroidota","ArchiDroid OTA","<~archidroid.ota.desc>","check.checked",
 		"xposed","Xposed Framework","<~archidroid.xposed.desc>","check.checked",
-		"updatemodem","<~archidroid.updatemodem> [UBUGNF1]","<~archidroid.updatemodem.desc>","check",
+		"updatemodem","<~archidroid.updatemodem> [XXUGNA8]","<~archidroid.updatemodem.desc>","check",
 
 		"archiapps","<#selectbg_g>ArchiDroid Apps</#>","","group",
 		"titaniumbackup","Titanium Backup","<~archidroid.apps.titaniumbackup.desc>","check.checked",
