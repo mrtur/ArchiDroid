@@ -30,7 +30,7 @@ CM_MrturDroid 2.5.0
 -Removed BBS app as per developer request
 -Updated MoAB hosts to 3 September
 -Update AdAway hosts to latest version
-- [!] Adlinux code review
+-[!] Adlinux code review
 # ArchiDroid's Pocket Debian has been rewritten from scratch to become more user friendly
 # If you've already used APD before, I suggest to call "adlinux rebuild" in order to update, as this release also includes updated Pocket Debian
 # Adlinux command is now more newbie friendly and allows even easier mounting than before
