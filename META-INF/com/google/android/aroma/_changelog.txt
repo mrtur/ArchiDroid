@@ -28,3 +28,4 @@ CM_MrturDroid 2.5.0
 -Updated Google Keyboard
 -Removed BBS app as per developer request
 -Updated MoAB hosts to 3 September
+-Update AdAway hosts to latest version
