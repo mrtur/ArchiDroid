@@ -1,251 +1,343 @@
 ===================================
-Since Sun Aug  3 11:49:40 UTC 2014
+Since Sun Sep  7 15:35:04 UTC 2014
 ===================================
 
-   * external/libnfc-nci
-d62f251 Adding NXP NCI Hal implementation
+   * frameworks/base
+ae74d12 base: Fix margin layouts params of MobileNetworkTile
+
+   * packages/apps/Settings
+7695858 CryptKeeper: update emergency call button to Holo
+
+===================================
+Since Sat Sep  6 15:23:21 UTC 2014
+===================================
 
    * frameworks/base
-29891ff Add navbar background preview to ThemesContract
-5264ec3 Include default wallpaper in LockscreenWallpaperPickerActivity
-0ab2e02 Move 3rd party wallpaper pickers to the front
-bdd3242 SystemUI: Replace CompassTile RotateAnimation with tweening
+c122044 Bypass the lockscreen when the hardware keyboard is slid out and security mode is 'none'
+12f12ac DocumentsUI: Workaround for aapt warnings
 
-   * hardware/libhardware
-1dc5e25 Revert "Add camera parameters for htc evo 3D. (2/2)"
+   * packages/apps/ContactsCommon
+2dda360 Merge "contacts: return the first sdcard entry found" into cm-11.0
+04edcb8 Merge "contacts: don't assume the device has an sdcard" into cm-11.0
+e71cb11 contacts: return the first sdcard entry found
+e6aea6f contacts: don't assume the device has an sdcard
 
    * packages/apps/Dialer
-1759c04 Dialer: Fix T9 for Hebrew
-
-   * packages/apps/Settings
-2e9cc68 Disable settings search on all subactivities.
-
-   * packages/services/Telephony
-4328f99 Merge "Don't overzealously disable all preferences in airplane mode." into cm-11.0
-
-   * vendor/cm
-ac29397 Update translators' list for Russian
-93a2149 Remove unnecessary duplicate
+62e1c1a Merge "Fix call stats fragment layout." into cm-11.0
 
 ===================================
-Since Sat Aug  2 12:38:49 UTC 2014
+Since Fri Sep  5 15:03:49 UTC 2014
 ===================================
-
-   * packages/apps/Settings
-2b7e31a Add summary to notification filtering
-77e1784 Proximity Wake-Up : adjust strings
-
-===================================
-Since Fri Aug  1 13:51:40 UTC 2014
-===================================
-
-   * bootable/recovery-cm
-043161d sr: Fix overlay issues
-246b224 Don't abort on read_file if the file is missing.
-d75c6e7 fix unnecessarily slow writing of EMMC partitions
-416f363 sr: touch: Only detect release if pressed
-fb4ba6c sr: bu: Show backup/restore progress in dialog text
-52a2f3f sr: Touch UI
-
-   * external/busybox
-1071f3e Fix remaining bionic warnings
 
    * frameworks/base
-26ff47e [2/2] Add option to change size of QS ribbon bar
-203fdae Framework: Make the dialog divider color themeable
-9035415 SystemUI: Separate system bar BGs for themes
+5422573 Optimize drawBitmapMesh using TRIANGLE_STRIP
+6bfd11d watermark: Place watermark in the bottom-right when both deltax and deltaty are 0
 
-   * packages/apps/CMHome
-7aa1a1e Add license file.
-
-   * packages/apps/InCallUI
-d93fdb3 Fix call buttons being incorrectly hidden.
-
-   * packages/apps/Mms
-a4f5950 Per conversation notification settings/ringtones
-
-   * packages/apps/Settings
-225e3b1 [1/2] Add option to change size of QS ribbon bar
-b3913f3 Automatic translation import
-
-===================================
-Since Thu Jul 31 11:30:47 UTC 2014
-===================================
-
-   * external/koush/Superuser
-0deb4d4 Automatic translation import
-
-   * android
-4c4b2ff Add ANT+ repositories
-
-   * bootable/recovery
-67cd9db Let minivold run in the recovery se domain
-
-   * bootable/recovery-cm
-adaf656 sr: updater: Fix multi-stage docs and code
-322e5b4 sr: updater: Use custom bootloader msg offset for stage functions
-
-   * external/whispersystems/WhisperPush
-883da5b Automatic translation import
-
-   * frameworks/av
-4142e51 Camera: Add Samsung klte camera parameters
-
-   * frameworks/base
-1317de4 Automatic translation import
-74fbf2e Add new Card Unavailable reason for SIM power down in APM.
-
-   * frameworks/opt/telephony
-6ee95d8 IMS: Add API to set create time for a Connection.
-c8a0f99 IMS : Notifying CallModifyRequest Fail or sucess
-e33fd4c Add ServiceStatus class for uniform capability handling
-6af3410 Change to return proper MNC in case of CSIM
-a71dd2b Fix voicemail count issue.
-
-   * frameworks/opt/telephony-msim
-e4fb032 Merge branch 'LNX.LA.3.5.2.2_rb1' of git://codeaurora.org/platform/frameworks/opt/telephony-msim into cm-11.0
-f7a22ed Revert "Adjust MccTable.updateMccMncConfiguration to 4.4.3 API"
-
-   * packages/apps/Apollo
-3b7f423 Automatic translation import
-
-   * packages/apps/BluetoothExt
-7014345 Automatic translation import
-
-   * packages/apps/CMAccount
-9fabb86 Automatic translation import
-
-   * packages/apps/CMFileManager
-2cbe24b Automatic translation import
-
-   * packages/apps/CMHome
-cf4c425 Automatic translation import
-
-   * packages/apps/CMUpdater
-0fa31fb Automatic translation import
-
-   * packages/apps/Calculator
-5b614da Automatic translation import
-
-   * packages/apps/Camera2
-1fd2916 Automatic translation import
-
-   * packages/apps/DSPManager
-ae216a6 Automatic translation import
-
-   * packages/apps/DeskClock
-2253885 Automatic translation import
+   * hardware/qcom/media-caf
+9e5a19e mm-video: Allow devices to override QComOMXMetadata header
 
    * packages/apps/Dialer
-b96fa39 Automatic translation import
+156b22e Improve strings.
+7237316 Fix call stats fragment layout.
 
    * packages/apps/Email
-8b6ee4f Automatic translation import
-
-   * packages/apps/InCallUI
-4175607 Automatic translation import
-
-   * packages/apps/LockClock
-d45cae6 Automatic translation import
-
-   * packages/apps/Mms
-f9f543f Automatic translation import
-
-   * packages/apps/Torch
-2b54264 Automatic translation import
-
-   * packages/apps/Trebuchet
-9b25292 Automatic translation import
-
-   * packages/inputmethods/LatinIME
-54d1206 Automatic translation import
+c1d1d0e Merge "AOSP Email app supports reply-to but it's not used for default when using imap." into cm-11.0
 
    * packages/services/Telephony
-b4a8d2f Don't overzealously disable all preferences in airplane mode.
-811982c Automatic translation import
-
-   * packages/wallpapers/Galaxy4
-41c164a Automatic translation import
-
-   * packages/wallpapers/PhotoPhase
-ba952a8 Automatic translation import
+b2a3eb9 Add back noise suppression.
 
    * vendor/cm
-34ee56f Disable multithreaded dexopt by default
+4d148ed add KPN 4G apn per CYAN-5253
 
 ===================================
-Since Tue Jul 29 11:40:05 UTC 2014
+Since Thu Sep  4 14:47:21 UTC 2014
 ===================================
 
-   * bionic
-18a8907 bionic: update memmove for 32 bits atomic
-
-   * external/busybox
-477b2eb android: backport pty implementation from aosp/master
-1f21642 Makefile: remove warnings on initial version check
-f641061 Android: final cleanup of new build system
+   * build
+4379526 ota_from_target_files: Validate signatures after possible data wipe
 
    * frameworks/base
-b6ced92 Be sure to shutdown the proximity sensor after display wake
-e02a4ba WallpaperCropper: fix lockscreen wallpaper "Set wallpaper" string
-3d07d4f Load original drawable if cached icon throws NotFoundException
-a5e1458 Themes: Whitelist animations
+c68f7ff Fix API check derpage
+bf90684 core: use 'normal' value for notification led off
+1280ef1 Use actual storage type of sdcard/usb (1/2).
+96350ea Clean up quick settings tile code.
+c14b389 Add ANT to the list of toggleable airplane mode radios
 
-   * hardware/qcom/gps
-fcd92b0 Get unbuildable loc_api module out of the way
+   * packages/apps/Apollo
+d42639e Merge "apollo: remove handler messages prior to kill the player" into cm-11.0
+3e22624 Merge "apollo: extract song list from adapter instead from a new cursor" into cm-11.0
+8951863 Merge "apollo: fix typo in sort order key" into cm-11.0
 
-   * kernel/google/msm
-e5bf64b ARM: 7759/1: decouple CPU offlining from reboot/shutdown
-aceb52a ARM: Use TTBR1 instead of reserved context ID
-0427b44 ARM: 7408/1: cacheflush: return error to userspace when flushing syscall fails
-bfc0345 ARM: 7569/1: mm: uninitialized warning corrections
-70f0da9 ARM: 7953/1: mm: ensure TLB invalidation is complete before enabling MMU
-b8de061 ARM: 7784/1: mm: ensure SMP alternates assemble to exactly 4 bytes with Thumb-2
-696eaff ARM: 7691/1: mm: kill unused TLB_CAN_READ_FROM_L1_CACHE and use ALT_SMP instead
-641fb8f ARM: 7660/1: tlb: add branch predictor maintenance operations
-647e818 ARM: 7678/1: Work around faulty ISAR0 register in some Krait CPUs
-f6cce71 ARM: fix scheduling while atomic warning in alignment handling code
-1aabd77 ARM: 7752/1: errata: LoUIS bit field in CLIDR register is incorrect
-61a21fc ARM: 7606/1: cache: flush to LoUU instead of LoUIS on uniprocessor CPUs
-9e2bcda ARM: mm: rename jump labels in v7_flush_dcache_all function
-7d6887e ARM: mm: implement LoUIS API for cache maintenance ops
-748a40d ARM: 7747/1: pcpu: ensure __my_cpu_offset cannot be re-ordered across barrier()
-5bdb171 ARM: 7587/1: implement optimized percpu variable access
-1f1f0db ARM: 7680/1: Detect support for SDIV/UDIV from ISAR0 register
-d6f8599 ARM: 7559/1: smp: switch away from the idmap before updating init_mm.mm_count
-1c9150b lib: cpu_rmap: avoid flushing all workqueues
-f1154d1 ARM: gic: use a private mapping for CPU target interfaces
-c04613e ARM: 7573/1: idmap: use flush_cache_louis() and flush TLBs only when necessary
-a7de555 ARM: 7542/1: mm: fix cache LoUIS API for xscale and feroceon
-1d4f474 ARM: mm: update __v7_setup() to the new LoUIS cache maintenance API
-583c133 ARM: kernel: update __cpu_disable to use cache LoUIS maintenance API
-c62d92d ARM: cpu hotplug: remove majority of cache flushing from platforms
-a0e2921 msm: hotplug: Block hotplug removal of CPU0
-e664074 ARM: smp: flush L1 cache in cpu_die()
-9350661 ARM: Don't dump vmalloc addresses with show_data()
-1a9a810 rcu: Add RCU_FAST_NO_HZ tracing for idle exit
-6d7a27b rcu: Add a module parameter to force use of expedited RCU primitives
-aad5efb [backport] sched_rt: Upstream fixes
-09c02fe [backport] sched: Misc upstream scheduler improvements
-c535f34 [backport]: sched: Load-based CPU boosting
-8279fcb sched: Remove get_online_cpus() usage
-cf015f4 Revert "Revert "sched: add sysctl for controlling task migrations on wake""
-13312f9 Revert "Revert "sched: add PF_WAKE_UP_IDLE""
-3c43da8 tracing/sched: Track per-cpu rt and non-rt cpu_load.
-0d530d2 kthread: Fix the race condition when kthread is parked
+   * packages/apps/Contacts
+217ddde String improvements.
 
-   * packages/apps/CMHome
-8ac22f2 Fix UndoBar display issue in Google Now mode.
+   * packages/apps/ContactsCommon
+949999f Improve strings.
+
+   * packages/apps/Dialer
+2e20ff1 Merge "Refine regexes for Das Telefonbuch." into cm-11.0
+
+   * packages/apps/Gallery2
+3a6215f Gallery2: Seek to trim start time only once when playing
+b64867e Gallery2: don't pause background music perminently
+812b1e3 Gallery2: Fix menu bar layout display error in portrait mode
+f5d86db Use WeakReferenes to reduce Bitmap memory footprint
+4f8d14a MoviePlayer: don't resume playing if there is pending dialog
+9e64956 MoviePlayer: don't pause after leaving for a long time
+7ec6579 Gallery2: Fix menu display inconsistent with its cluster
+5a82065 Gallery2: Add audio output switcher between headset/speaker
+e53b451 Gallery2: Fix Gallery crash when exit playing gif pic.
+540ee64 Gallery2: Fix force close issue when trim video
+ac95683 Gallery2: Fix Gallery2 ANR when run monkey
+b885829 MoviePlayer: add default server timeout
+f92a9be Gallery2: Fix cropped picture cannot be saved.
+c74d68a Gallery2: Fix force close issue when mute some videos
+970aeca Gallery2: avoid black screen when MovieActivity ends
+ac9cc3d Gallery2: Make forward/rewind button grey when stopVideo
+b984156 MoviePlayer: add default server timeout
+a1f2e8e Gallery: add an activity to set system properties for streaming
+b46f99c Gallery2: Make icon display completely.
+1f40c21 Gallery2: add mkv and divx mimetypes
+56c05c0 MoviePlayer: prevent resume dialog for live streaming
+ecd7f78 MoviePlayer: fix background issue when loading a video
+24fada6 MoviePlayer: fix a crash
+450a393 Gallery2: Fix gallery crash when view gif pic in Mms
+1291323 Gallery2-Add Presentation judgement in State Equel
+aaf1377 Gallery2: Make picture in selected status when back from homepage
+7609565 Gallery2: fix FC when try to open video folder as MMS attachment.
+6eb045a Gallery2: fix video playback after system language change
+67a88f5 Gallery2: fix time text display issue
+85df641 Gallery2: Fix the string can't  be translated in Gallery2.
+b4a9636 Gallery2: update content start/end once getUpdateinfo
+a8bb13b Gallery2: fix can not crop large *.bmp picture
+25373c9 Gallery2: Can set picture as screen color background.
+e09343a Gallery2: Fix crash sometimes when delete video in Gallery.
+9b59b8e Gallery2: Fix Gallery Crash when click Information menu.
+3942d2b MoviePlayer: prevent black screen on resuming
+e6ba43e MoviePlayer: fix streaming video stepping forward
+a1fd919 Gallery2: Fix the video play time not change.
+a92b9d9 Gallery2: Fix batches of issues in movie effects
+f919dbf MoviePlayer: Flush UI display after suspend/resume
+fa0984d Gallery2: add some video features
+9afea3e Gallery2: add some video features
+3a90696 Gallery2: support live streaming and bookmarks
+93a66b8 Gallery2: support live streaming and bookmarks
+bce738c Gallery2: support stereo/single track play mode
+2513dbf Gallery2: support stereo/single track play mode
+f1c4664 Gallery2: support loop/single video play mode
+76b5081 Gallery2: support loop/single video play mode
+2f15566 Gallery2: support audio effects during video play.
+12c89af Gallery2: Support HSCI screencolor settings use
+3ac7264 Gallery2: support GIF animation
+10a68d3 Gallery2: support GIF animation
+1e61414 Gallery2: fix two same albums come out after double click tags
+b292d11 Gallery2: fix issue in readTag when parse Exif
+a7cc2ee Gallery2: Fix NPE in LocalSource during monkey test.
+ea1a3da Gallery2: Fix force close when deletes about 5000 pictures.
+79dfda8 Gallery2: fix display abnormal when tap sharpness in filtershow
+dd87064 Gallery2: fix selection count didn't update after floder is deleted
+d6f2ded Gallery2: fix can not add gallery widget to home screen
+32980c2 Gallery2: fix cropview shows abnormal if lock and rotate screen
+c0ca5c1 Gallery2: Remove slideshow option if all files of the folder are video
+d62f230 Gallery2: Fix the superposition of two images issue
+e3d11d4 Gallery2: The menu bar will not flicker.
+e78bf0d Gallery2: catch OOM error when crop big-size picture
+8599491 Gallery2: if selected count is 0, leave selection mode.
+04c7b7a Gallery2: keep selection mode when deSelectAll
+00d4ad3 Gallery2: invalidate album view even only size changed
+07c0759 Gallery2: set the progress bar when we pause the video
+09f85da Gallery2: update selected number for database change
+f4ec227 Gallery2: cut some menu items if current page is single item
+395217c Gallery2: force close happens when remove Gallery widget
+
+   * packages/apps/InCallUI
+91acd30 Improve strings.
+1df0439 InCallUI CMCC: disable volume boost by default
+77d1393 MSIM(DSDA): Use new methods in accordance with new design
+5ef891c InCallUI: Update mute state accordingly after adding call
+298fc72 Fix to mute/unmute properly while adding a call
+6d4bb8a Ims: Handle START_READY_EVT and STOP_READY_EVT
+7970189 IMS-VT: Fix abandoned GLConsumer
+9185b33 InCallUI: Do not dismiss the keyguard when there is active call
+37621fa InCallUI: Hide sim label when when calling sub is absent
+3a155ba TeleService: Show answer UI and hide manage conference panel for MT CALL
+ab081ce InCallUI: Fix the repeated appending for the input number from HID.
+f7e4b58 MSIM(DSDA): Fix incoming call answering issue.
+98b0597 InCallUI: Use NoActionBar theme for InCallActivity
+cf8ebee InCallUI: Get sim name according to system setting on DSDS mode
+3fd4eb2 InCallUI: Call internalResolveIntent() in onCreat() method
+a4aafe7 InCallUI: Dismiss reject sms dialogs when press back key on DSDA mode
+7c66eed InCallUI: Get sim name according to system setting
+9bc2307 Fix no sound hear when one call disconnected.
+
+   * packages/apps/LockClock
+fdb3640 LockClock : Return condition code as part of query
+
+   * packages/apps/Mms
+d58456b Merge "mms: prevent FC if there isn't and associated activity" into cm-11.0
 
    * packages/apps/Settings
-c2afd03 Settings: Fix camel case
+3bcbd70 Properly apply edit dialog brightness value.
+c0c7339 Use actual storage type of sdcard/usb (2/2).
+ad98a67 settings: prevent NPE if device doesn't support ActionBar
+d42fc1d Settings: Alert user when they attempt to add an invalid number to BL.
 
-   * packages/apps/Trebuchet
-6903b91 Trebuchet : Add folder on folder checks
+   * packages/providers/ContactsProvider
+d6983f8 ContactsProvider: Upgrade database for new views, columns
 
-   * packages/services/Telephony
-948b128 IMS: Only enable IMS calls if IMS service status shows enabled
+   * packages/providers/TelephonyProvider
+e85e029 TelephonyProvider: Set untranslatables
 
    * vendor/cm
-1c4bf35 This should make your clean-up easier
+abb97e2 Cleanup/Fix APN data fields
+
+===================================
+Since Wed Sep  3 13:23:55 UTC 2014
+===================================
+
+   * android
+0f1288a Add missing ANT+ repository
+
+   * external/cardslib
+5449729 Fix card removal bug introduced in merge.
+
+   * frameworks/base
+cd793fc Themes: Only kill launchers if overlays or icons changed
+2ece400 AppOps: add permission check when enabing nfc
+b351a48 AppOps: Add nfc enable control into AppOps
+
+   * frameworks/opt/telephony
+227db10 SamsungQualcommRIL: make isGSM protected
+179e73d Merge "SamsungQualcommRIL: Handle ResponseCallList in our subclass" into cm-11.0
+
+   * hardware/qcom/audio-caf
+a0a08f6 hal: Fix digital USB headset combo device
+
+   * packages/apps/Contacts
+16e874e Contacts: Add another missing tablet layout from cmcc merge.
+48b6146 Contacts: Add missing tablet menu layout.
+41b48e0 Contacts: Create holo light local/remote group icons.
+5b1c3ec Contacts: Rewrite local group edit activity.
+
+   * packages/apps/Dialer
+b20169e Fix menu don't display problem when input digits
+54def94 Fix can't make call problem
+f0400cd Dialer: Start VoiceMail interface directly when click voice mail
+176dc34 Dialer: Add long click listener to support long press * or #
+c24a7b1 Dialer: Don't delete '+' for number when enter select contact interface
+2e1bd19 Dialer: Show option menu items if phone number is empty
+fe9331d Dialer: Do not convert the number when it is a SIP number
+1cd3ac9 Dialer: Set the duration view visible when the call type is CSVT
+023b628 Support to delete multi call log
+9db81ba Dialer: Send broadcast to cancel missed vtcalls notification
+7e8ff47 CSVT IMS: fix the csvt & ims call log display in call history.
+aef2105 Dialer: Get SIM2 alias name with the correct keyword
+4b6daf7 Add the duration type for call time in call log
+7c9a2e0 IMS: add ims call log type in Dialer app .
+ef56f21 Add call log search in dialer
+df9e0dc CSVT: when in videocall case, click dialer should go to video call screen.
+a566404 Correct the interface of fetch calls
+767baf5 Dialer: Add IP call support in dialer
+3cc956f CSVT: fix "Missed Calls Only" tab.
+eb34afb CSVT: Hide the "Video call" option for non-CU mode.
+dc34c89 CSVT: add CSVT calltype in calllog and CSVT entry in calllog details
+2548933 CSVT: CSVT entry in Dialer App.
+aab8fae Catch the SQLiteFullException when updaing the call log database
+7035730 Dialer: Add the subscription info for call log.
+24c2b39 Dialer: shows deviceinfo when input *#0000#
+c2b2d34 Dialer: Hide "Add 2-sec pause" and "Add wait" if phone number is empty
+097b82f Dialer: Contact photo in call log can not change in time
+78b977a Dialer: show all device IDs for multiple SIM devices
+0a0483c Contacts: add speed dial support
+
+   * packages/apps/Email
+6c71bba Email: cmcc cleanup
+968212f Email: fix sync size spinner text being cut off
+5774102 Email: Viewing the attachments of the sent emails
+aaebfd8 Email: Do not set the empty name got from database as name content
+e308108 Email: Hide the feedback button if nowhere to feedback
+c0efa55 Email: Add a summary for "Confirm before forwarding"
+b514628 Email: Update sync status for mailboxs which not load from server.
+82eaab0 Email: Encoded the name of the attachment files.
+21ca637 Email: Do not show "Sending feedback" item if the uri is null in general settings
+e35ace0 Email: Display the load more view at the bottom of the mail.
+f53340c Email: New a receiver to handle the checking mail action.
+58ff9fb Email: Notify UI data changed of the unread mailbox.
+3c993ea Email: Cache the attachment during downloading
+89c4c97 Email: Do not delete the message from server if the user set it as "Never"
+c10da15 Email: Remove the "Message text size" setting item from general settings.
+548c1a0 Email: Do not use the string res as authorities attribute.
+a346fd5 Email: Change the smtp normal port to 25.
+ebf6263 Email: Let the user could enable "Confirm before forward" function.
+e6905c3 Email: Show the defined the icon on the notification.
+1564fc4 Email: Let the user could select recipients from Contacts.
+d3aceeb Email: Let the user could add files as attachment.
+bb46018 Email: Support Email could configure the sync size function.
+cd76d3a Email: Fix issue "Qucik responses" in account setting UI doesn't translate
+04960da Email: Remove "Sync mail..." option when create POP3/IMAP account
+75ad90a Revert "email: display a "load more" button"
+
+   * packages/apps/Mms
+2e1efc0 mms: prevent FC if there isn't and associated activity
+3079ec0 mms: do not close database
+
+   * packages/apps/UnifiedEmail
+0dca5cb UnifiedEmail: Disable "Select All" from MultiPickContactActivity.
+0297ffb UnifiedEmail: Only create a single instance of MultiPickContactActivity.
+058c559 UnifiedEmail: cleanup cmcc strings
+6072b60 Email: Do not invalidate the option menu when the search view expanded.
+ae41d32 UnifiedEmail: Fix unit test failure.
+930a641 Email:Move the mails belong to the swiping folder
+d0ae28c Email: Update the menu after the folder is changed
+32cc6ff Email: Should back to Email after recording audio as attachment
+1b1dd3a UnifiedEmail: Save the copied size as the file size
+50c99ad UnifiedEmail: Display the load more view at the bottom of the mail.
+5446d6b UnifiedEmail: Use the cached attachment to save first
+dae8c5e UnifiedEmail: Display the confirm dialog before forward.
+6a21a9a UnifiedEmail: Support customize the notification icon for different account.
+0dfaa88 UnifiedEmail: Display the pick recipients button.
+03e6e2b UnifiedEmail: Display the attach file menu.
+fcbedd7 UnifiedEmail: Support Email load more content function.
+5b10691 Revert "unifiedemail: display a "load more" button"
+
+   * packages/providers/TelephonyProvider
+16dd014 TelephonyProvider: Upgrade database for newly added columns
+4955118 TelePhonyProvider: Support call waiting on CDMA phone
+24c3aa6 TelephonyProvider: Add resource config for IP protocol
+93e8d50 TelephonyProvider: Add Support for Mms subject search
+f2327e2 TelephonyProvider: Add visit_area column in DB
+d57c47d Mms: Fix it's slow to change back to conversation mode
+027d313 Mms: Fix The MMS detail will display as the first SMS detail
+69e5146 TelephonyProvider: Improve the performance of deleting Mms
+4d67e69 MMS: Support query mail box messages by mms or sms selection
+f214c79 TelephonyProvider: Fix Message force close when attached long name audio
+43b439a MMS: Display right subscription when copy SIM message to phone.
+89bfb7f TelephonyProvider: Support classification search for message.
+9485ed7 Mms: Fix issue that message will crash when sending mms and can not download mms.
+0ffb7ea Mms: Fix no message show after copying SMS to phone
+9fe49ac Mms: Only match the first character when searching for message
+8d0bddf MMS: Fix display SIM card message incorrect.
+d4b4ecf MMS: Fix issue no replay option when click SIM card message.
+573c8b3 MMS: Support query and delete multi SIM card message.
+28e8813 Mms: Support SMS full indicator
+cd91bca MMS: Add interface to query memory usage of the terminal
+5da0b2d Add roaming area APN restriction
+672863e Add the default APN feature
+461271d Mms: Support get messages according to mailbox type and slot id
+c969321 TelephonyProvider: Add CDMA call forwarding function
+a29ee79 TelephonyProvider :Add multi-language APN name support
+9cde9e4 APN: Add the read only APN feature.
+07f6117 TelephonyProvider: Display APN PPP number
+
+   * packages/services/Telephony
+b82216d Add up navigation to call barring activity.
+19bb78c Remove 'cancel all' preference.
+84adcba Fix handling of unavailable network in call barring activity.
+bebe4d1 Grey out ok button instead of showing a toast.
+25231a5 Improve strings and move arrays to correct place.
+e4a03ea MSIM: Refactor and fix msim settings
+e70aadb Revert "TeleService : Fix the network mode wrong issue for ssss"
+
+   * vendor/cm
+c95686f Modified APNs for Plus.pl, Orange SK, and Vodafone AU per CYAN-5208 BACON-1060 BACON-1089
 
